@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Komentar, Variabel, dan Tipe Data dalam Bahasa C
 
 > Catatan materi Pemrograman Dasar — Kelas X RPL
