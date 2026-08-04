@@ -140,7 +140,7 @@ char kelas[] = "X-PPLG";
 ### Kategori Tipe Data di C
 
 1. **Tipe data primitif / bawaan** (*primary/built-in*) — `int`, `char`, `float`, `double`
-2. **Tipe data turunan** (*derived*) — array, pointer, reference
+2. **Tipe data turunan** (*derived*) — `array`, `pointer`, `reference`
 
 Fokus pembahasan kali ini ada di tipe data primitif.
 
