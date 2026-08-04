@@ -24,7 +24,7 @@ layout: default
 
 **Komentar** adalah teks di dalam kode program yang diabaikan oleh compiler/interpreter saat program dijalankan. Komentar tidak memengaruhi jalannya program, fungsinya murni untuk manusia yang membaca kode.
 
-### Kegunaan Komentar
+### Fungsi Komentar dalam Kode Program
 
 - Menjelaskan alur atau tahapan logika dalam kode
 - Memberikan informasi atau catatan tambahan pada bagian kode tertentu
