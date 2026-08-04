@@ -59,8 +59,10 @@ int main() {
 }
 ```
 
-> [!NOTE]
-> Komentar single-line (`//`) hanya berlaku untuk satu baris. Untuk penjelasan yang lebih panjang dan mencakup banyak baris sekaligus, gunakan `/* */`.
+<div style="background:#ddf4ff; border-left:4px solid #218bff; padding:14px 18px; border-radius:6px; margin:16px 0;">
+<strong>Catatan</strong><br>
+Komentar single-line (<code>//</code>) hanya berlaku untuk satu baris. Untuk penjelasan yang lebih panjang dan mencakup banyak baris sekaligus, gunakan <code>/* */</code>.
+</div>
 
 ---
 
@@ -80,14 +82,16 @@ Kotak dengan label `umur` misalnya hanya cocok diisi angka, bukan teks — begit
 
 ### Struktur Variabel
 
-> [!IMPORTANT]
-> Setiap variabel di bahasa C **selalu** terdiri dari tiga bagian berikut. Ketiganya wajib ada saat sebuah variabel dideklarasikan dengan nilai awal.
->
-> | # | Bagian | Keterangan |
-> |:-:|---|---|
-> | 1 | **Nama Variabel** *(identifier)* | Label yang dipakai untuk memanggil/mengakses nilai |
-> | 2 | **Tipe Data** | Menentukan jenis nilai apa yang boleh disimpan |
-> | 3 | **Nilai** | Data aktual yang disimpan di dalam variabel |
+<div style="background:#f2ebff; border-left:4px solid #8250df; padding:14px 18px; border-radius:6px; margin:16px 0;">
+<strong>Penting</strong><br>
+Setiap variabel di bahasa C selalu terdiri dari tiga bagian berikut. Ketiganya wajib ada saat sebuah variabel dideklarasikan dengan nilai awal.
+
+| # | Bagian | Keterangan |
+|:-:|---|---|
+| 1 | Nama Variabel *(identifier)* | Label yang dipakai untuk memanggil/mengakses nilai |
+| 2 | Tipe Data | Menentukan jenis nilai apa yang boleh disimpan |
+| 3 | Nilai | Data aktual yang disimpan di dalam variabel |
+</div>
 
 Sintaks dasar deklarasi variabel:
 
@@ -107,23 +111,25 @@ char kelas[] = "X-PPLG";
 
 ### Aturan Penamaan Variabel
 
-> [!TIP]
-> **Diizinkan**
->
-> | Aturan | Contoh valid |
-> |---|---|
-> | Diawali huruf (a-z, A-Z) atau underscore (`_`) | `parkiran`, `nama`, `Kelas`, `_umur`, `asal`, `aSAl` |
-> | Bersifat *case-sensitive* — huruf besar dan kecil dianggap berbeda | `nama` ≠ `Nama` (dua variabel yang berbeda) |
-> | Kata lebih dari satu suku kata dipisah dengan underscore (`_`) | `nama_lengkap`, `jenis_mobil`, `menu_makanan`, `mata_pelajaran` |
+<div style="background:#dafbe1; border-left:4px solid #1a7f37; padding:14px 18px; border-radius:6px; margin:16px 0;">
+<strong>Diizinkan</strong>
 
-> [!WARNING]
-> **Tidak Diizinkan**
->
-> | Aturan | Contoh tidak valid | Alasan |
-> |---|---|---|
-> | Tidak boleh dipisah dengan tanda strip (`-`) | `mobil-sport`, `warung-makan`, `mata-pelajaran` | tanda `-` dibaca compiler sebagai operator pengurangan |
-> | Tidak boleh diawali angka atau simbol | `1nama`, `9azrul`, `#kaburajadulu`, `*lemari`, `@raffiahmad` | identifier harus diawali huruf atau underscore |
-> | Tidak boleh menggunakan kata kunci (*reserved word*) bahasa C | `printf`, `if`, `else`, `int`, `return` | kata tersebut sudah dipakai sebagai sintaks bahasa C |
+| Aturan | Contoh valid |
+|---|---|
+| Diawali huruf (a-z, A-Z) atau underscore (`_`) | `parkiran`, `nama`, `Kelas`, `_umur`, `asal`, `aSAl` |
+| Bersifat *case-sensitive* — huruf besar dan kecil dianggap berbeda | `nama` ≠ `Nama` (dua variabel yang berbeda) |
+| Kata lebih dari satu suku kata dipisah dengan underscore (`_`) | `nama_lengkap`, `jenis_mobil`, `menu_makanan`, `mata_pelajaran` |
+</div>
+
+<div style="background:#fff8c5; border-left:4px solid #9a6700; padding:14px 18px; border-radius:6px; margin:16px 0;">
+<strong>Tidak Diizinkan</strong>
+
+| Aturan | Contoh tidak valid | Alasan |
+|---|---|---|
+| Tidak boleh dipisah dengan tanda strip (`-`) | `mobil-sport`, `warung-makan`, `mata-pelajaran` | tanda `-` dibaca compiler sebagai operator pengurangan |
+| Tidak boleh diawali angka atau simbol | `1nama`, `9azrul`, `#kaburajadulu`, `*lemari`, `@raffiahmad` | identifier harus diawali huruf atau underscore |
+| Tidak boleh menggunakan kata kunci (*reserved word*) bahasa C | `printf`, `if`, `else`, `int`, `return` | kata tersebut sudah dipakai sebagai sintaks bahasa C |
+</div>
 
 ---
 
@@ -140,13 +146,15 @@ Fokus pembahasan kali ini ada di tipe data primitif.
 
 ### Jenis Tipe Data Primitif
 
-> [!IMPORTANT]
-> | Tipe | Fungsi | Contoh nilai |
-> |---|---|---|
-> | **`int`** *(integer)* | Menyimpan bilangan bulat | `1`, `2`, `3` |
-> | **`float`** | Menyimpan bilangan desimal, presisi sekitar 6–7 digit di belakang koma | `6.7`, `3.14`, `1.234567` |
-> | **`double`** | Menyimpan bilangan desimal dengan presisi lebih tinggi, hingga sekitar 15 digit | `1.234567890000` |
-> | **`char`** *(character)* | Menyimpan satu karakter tunggal, ditulis dengan tanda petik satu `' '` | `'1'`, `'A'`, `'B'`, `'C'` |
+<div style="background:#f2ebff; border-left:4px solid #8250df; padding:14px 18px; border-radius:6px; margin:16px 0;">
+
+| Tipe | Fungsi | Contoh nilai |
+|---|---|---|
+| `int` *(integer)* | Menyimpan bilangan bulat | `1`, `2`, `3` |
+| `float` | Menyimpan bilangan desimal, presisi sekitar 6–7 digit di belakang koma | `6.7`, `3.14`, `1.234567` |
+| `double` | Menyimpan bilangan desimal dengan presisi lebih tinggi, hingga sekitar 15 digit | `1.234567890000` |
+| `char` *(character)* | Menyimpan satu karakter tunggal, ditulis dengan tanda petik satu `' '` | `'1'`, `'A'`, `'B'`, `'C'` |
+</div>
 
 ### Bagaimana dengan String?
 
@@ -161,16 +169,17 @@ char kelas[] = "X-PPLG";    // string, tersimpan sebagai array of char
 
 ### Format Specifier
 
-> [!TIP]
-> Format specifier digunakan untuk menghubungkan sebuah variabel dengan fungsi `printf()` agar nilainya bisa ditampilkan sesuai tipe datanya.
->
-> | Tipe Data | Format Specifier |
-> |:-:|:-:|
-> | `int` | `%d` atau `%i` |
-> | `float` | `%f` |
-> | `double` | `%lf` |
-> | `char` | `%c` |
-> | string (`char[]`) | `%s` |
+<div style="background:#ddf4ff; border-left:4px solid #218bff; padding:14px 18px; border-radius:6px; margin:16px 0;">
+Format specifier digunakan untuk menghubungkan sebuah variabel dengan fungsi <code>printf()</code> agar nilainya bisa ditampilkan sesuai tipe datanya.
+
+| Tipe Data | Format Specifier |
+|:-:|:-:|
+| `int` | `%d` atau `%i` |
+| `float` | `%f` |
+| `double` | `%lf` |
+| `char` | `%c` |
+| string (`char[]`) | `%s` |
+</div>
 
 ---
 
@@ -180,14 +189,16 @@ Kalian mungkin memperhatikan tanda `\n` pada beberapa contoh program sebelumnya 
 
 **Escape sequence** adalah kombinasi karakter yang diawali tanda backslash (`\`) untuk merepresentasikan karakter khusus yang tidak bisa langsung diketik atau punya fungsi tersendiri (seperti pindah baris atau tab), bukan untuk ditampilkan apa adanya.
 
-> [!NOTE]
-> | Escape Sequence | Fungsi |
-> |:-:|---|
-> | `\n` | Pindah ke baris baru (*new line*) |
-> | `\t` | Menambahkan tab (indentasi horizontal) |
-> | `\"` | Menampilkan tanda kutip dua `"` di dalam string |
-> | `\'` | Menampilkan tanda kutip satu `'` di dalam karakter |
-> | `\\` | Menampilkan tanda backslash `\` |
+<div style="background:#ddf4ff; border-left:4px solid #218bff; padding:14px 18px; border-radius:6px; margin:16px 0;">
+
+| Escape Sequence | Fungsi |
+|:-:|---|
+| `\n` | Pindah ke baris baru (*new line*) |
+| `\t` | Menambahkan tab (indentasi horizontal) |
+| `\"` | Menampilkan tanda kutip dua `"` di dalam string |
+| `\'` | Menampilkan tanda kutip satu `'` di dalam karakter |
+| `\\` | Menampilkan tanda backslash `\` |
+</div>
 
 **Contoh penggunaan:**
 
@@ -197,7 +208,7 @@ Kalian mungkin memperhatikan tanda `\n` pada beberapa contoh program sebelumnya 
 int main() {
     printf("Nama\tKelas\n");       // \t memberi jarak seperti tabel, \n pindah baris
     printf("Farid\tX-PPLG\n");
-    printf("Berkata: \"Saya akan lawan!!\"\n"); // \" menampilkan tanda kutip
+    printf("Dia berkata: \"Semangat belajar!\"\n"); // \" menampilkan tanda kutip
     return 0;
 }
 ```
@@ -207,11 +218,13 @@ int main() {
 ```
 Nama	Kelas
 Farid	X-PPLG
-Berkata: "Saya akan lawan!!"
+Dia berkata: "Semangat belajar!"
 ```
 
-> [!WARNING]
-> Tanpa `\n`, seluruh hasil `printf()` akan tercetak menyambung dalam satu baris meskipun ditulis di baris kode yang berbeda-beda. Ini adalah kesalahan yang cukup sering terjadi pada pemula.
+<div style="background:#fff8c5; border-left:4px solid #9a6700; padding:14px 18px; border-radius:6px; margin:16px 0;">
+<strong>Perhatian</strong><br>
+Tanpa <code>\n</code>, seluruh hasil <code>printf()</code> akan tercetak menyambung dalam satu baris meskipun ditulis di baris kode yang berbeda-beda. Ini adalah kesalahan yang cukup sering terjadi pada pemula.
+</div>
 
 ---
 
