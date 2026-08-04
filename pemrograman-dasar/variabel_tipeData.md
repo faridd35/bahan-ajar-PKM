@@ -281,9 +281,9 @@ Program berikut menggabungkan komentar, variabel, seluruh tipe data (`int`, `flo
 
 int main() {
     // Deklarasi variabel dengan berbagai tipe data
-    char nama[] = "Farid";       // string (array of char)
-    int umur = 16;               // tipe int
-    float tinggi_badan = 170.5;  // tipe float
+    char nama[] = "Farid";        // string (array of char)
+    int umur = 20;                // tipe int
+    float tinggi_badan = 170.5;   // tipe float
     char golongan_darah = 'A';    // tipe char
 
     /*
