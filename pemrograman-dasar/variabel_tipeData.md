@@ -223,7 +223,7 @@ Kalian mungkin memperhatikan tanda `\n` pada beberapa contoh program sebelumnya 
 int main() {
     printf("Nama\tKelas\n");       // \t memberi jarak seperti tabel, \n pindah baris
     printf("Farid\tX-PPLG\n");
-    printf("Dia berkata: \"Semangat belajar!\"\n"); // \" menampilkan tanda kutip
+    printf("Dia berkata: \"Saya Akan Lawan!!!\"\n"); // \" menampilkan tanda kutip
     return 0;
 }
 ```
@@ -233,7 +233,7 @@ int main() {
 ```
 Nama	Kelas
 Farid	X-PPLG
-Dia berkata: "Semangat belajar!"
+Dia berkata: "Saya Akan Lawan!!!"
 ```
 
 <div markdown="1" style="background:#fff8c5; border-left:4px solid #9a6700; padding:14px 18px; border-radius:6px; margin:16px 0;">
