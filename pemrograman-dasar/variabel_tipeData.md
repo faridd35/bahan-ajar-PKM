@@ -22,7 +22,7 @@ layout: default
 
 ## 1. Komentar
 
-**Komentar** adalah teks di dalam kode program yang diabaikan oleh compiler/interpreter saat program dijalankan. Komentar tidak memengaruhi jalannya program — fungsinya murni untuk manusia yang membaca kode.
+**Komentar** adalah teks di dalam kode program yang diabaikan oleh compiler/interpreter saat program dijalankan. Komentar tidak memengaruhi jalannya program, fungsinya murni untuk manusia yang membaca kode.
 
 ### Kegunaan Komentar
 
@@ -81,7 +81,7 @@ Variabel dapat dibayangkan seperti sebuah **kotak berlabel**:
 - **Barang di dalam kotak** → nilai yang disimpan
 - **Jenis barang yang boleh dimasukkan** → tipe data
 
-Kotak dengan label `umur` misalnya hanya cocok diisi angka, bukan teks — begitu juga variabel bertipe `int` hanya boleh menyimpan bilangan bulat.
+Kotak dengan label `umur` misalnya hanya cocok diisi angka, bukan teks. Begitu juga variabel bertipe `int` hanya boleh menyimpan bilangan bulat.
 
 ### Struktur Variabel
 
@@ -125,7 +125,7 @@ char kelas[] = "X-PPLG";
 | Aturan | Contoh valid |
 |---|---|
 | Diawali huruf (a-z, A-Z) atau underscore (`_`) | `parkiran`, `nama`, `Kelas`, `_umur`, `asal`, `aSAl` |
-| Bersifat *case-sensitive* — huruf besar dan kecil dianggap berbeda | `nama` ≠ `Nama` (dua variabel yang berbeda) |
+| Bersifat *case-sensitive*, yaitu huruf besar dan kecil dianggap berbeda | `nama` ≠ `Nama` (dua variabel yang berbeda) |
 | Kata lebih dari satu suku kata dipisah dengan underscore (`_`) | `nama_lengkap`, `jenis_mobil`, `menu_makanan`, `mata_pelajaran` |
 
 </div>
@@ -151,8 +151,8 @@ char kelas[] = "X-PPLG";
 
 ### Kategori Tipe Data di C
 
-1. **Tipe data primitif / bawaan** (*primary/built-in*) — `int`, `char`, `float`, `double`
-2. **Tipe data turunan** (*derived*) — array, pointer, reference
+1. **Tipe data primitif / bawaan** (*primary/built-in*) : `int`, `char`, `float`, `double`
+2. **Tipe data turunan** (*derived*) : `array`, `pointer`, `reference`
 
 Fokus pembahasan kali ini ada di tipe data primitif.
 
@@ -255,26 +255,21 @@ Program berikut menggabungkan komentar, variabel, seluruh tipe data (`int`, `flo
 
 int main() {
     // Deklarasi variabel dengan berbagai tipe data
-    int umur = 16;               // tipe int
-    float tinggiBadan = 165.5;   // tipe float
-    double phi = 3.14159265358;  // tipe double
-    char golonganDarah = 'O';    // tipe char
     char nama[] = "Farid";       // string (array of char)
-    char kelas[] = "X-PPLG";     // string (array of char)
+    int umur = 16;               // tipe int
+    float tinggi_badan = 170.5;  // tipe float
+    char golongan_darah = 'A';    // tipe char
 
     /*
     Menampilkan seluruh data ke layar
     menggunakan format specifier yang sesuai
     dengan tipe data masing-masing variabel
     */
-    printf("=== BIODATA SISWA ===\n");
-    printf("Nama\t\t: %s\n", nama);
-    printf("Kelas\t\t: %s\n", kelas);
-    printf("Umur\t\t: %d tahun\n", umur);
-    printf("Tinggi Badan\t: %.1f cm\n", tinggiBadan);
-    printf("Golongan Darah\t: %c\n", golonganDarah);
-    printf("Nilai Phi\t: %.5lf\n", phi);
-
+    printf("===== BIODATA =====\n");
+    printf("Nama           : %s\n", nama);
+    printf("Umur           : %d tahun\n", umur);
+    printf("Tinggi Badan   : %.1f cm\n", tinggi_badan);
+    printf("Golongan Darah : %c\n", golongan_darah);
     return 0;
 }
 ```
@@ -282,13 +277,11 @@ int main() {
 **Output program:**
 
 ```
-=== BIODATA SISWA ===
-Nama		: Farid
-Kelas		: X-PPLG
-Umur		: 16 tahun
-Tinggi Badan	: 165.5 cm
-Golongan Darah	: O
-Nilai Phi	: 3.14159
+====== BIODATA ======
+Nama           : Farid
+Umur           : 20 tahun
+Tinggi Badan   : 170.5 cm
+Golongan Darah : A
 ```
 
 ---
@@ -298,7 +291,7 @@ Nilai Phi	: 3.14159
 - **Komentar** (`//` dan `/* */`) tidak memengaruhi jalannya program, tetapi sangat membantu dokumentasi dan kolaborasi.
 - **Variabel** adalah wadah bernama untuk menyimpan nilai, dengan struktur: nama variabel, tipe data, dan nilai. Penamaan variabel harus mengikuti aturan identifier yang berlaku di C.
 - **Tipe data primitif** di C meliputi `int`, `float`, `double`, dan `char`.
-- **String tidak ada sebagai tipe data bawaan di C** — string direpresentasikan sebagai `char[]` (array of char).
+- **String tidak ada sebagai tipe data bawaan di C**, sebagai gantinya string direpresentasikan sebagai `char[]` (array of char).
 - Setiap tipe data punya **format specifier**-nya sendiri saat digunakan pada `printf()`: `%d`/`%i` untuk int, `%f` untuk float, `%lf` untuk double, `%c` untuk char, dan `%s` untuk string.
 - **Escape sequence** (`\n`, `\t`, `\"`, `\'`, `\\`) digunakan untuk menampilkan karakter khusus atau mengatur format tampilan output.
 
