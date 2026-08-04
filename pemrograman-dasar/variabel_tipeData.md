@@ -59,7 +59,7 @@ int main() {
 }
 ```
 
-<div style="background:#ddf4ff; border-left:4px solid #218bff; padding:14px 18px; border-radius:6px; margin:16px 0;">
+<div markdown="1" style="background:#ddf4ff; border-left:4px solid #218bff; padding:14px 18px; border-radius:6px; margin:16px 0;">
 <strong>Catatan</strong><br>
 Komentar single-line (<code>//</code>) hanya berlaku untuk satu baris. Untuk penjelasan yang lebih panjang dan mencakup banyak baris sekaligus, gunakan <code>/* */</code>.
 </div>
@@ -82,7 +82,7 @@ Kotak dengan label `umur` misalnya hanya cocok diisi angka, bukan teks — begit
 
 ### Struktur Variabel
 
-<div style="background:#f2ebff; border-left:4px solid #8250df; padding:14px 18px; border-radius:6px; margin:16px 0;">
+<div markdown="1" style="background:#f2ebff; border-left:4px solid #8250df; padding:14px 18px; border-radius:6px; margin:16px 0;">
 <strong>Penting</strong><br>
 Setiap variabel di bahasa C selalu terdiri dari tiga bagian berikut. Ketiganya wajib ada saat sebuah variabel dideklarasikan dengan nilai awal.
 
@@ -111,7 +111,7 @@ char kelas[] = "X-PPLG";
 
 ### Aturan Penamaan Variabel
 
-<div style="background:#dafbe1; border-left:4px solid #1a7f37; padding:14px 18px; border-radius:6px; margin:16px 0;">
+<div markdown="1" style="background:#dafbe1; border-left:4px solid #1a7f37; padding:14px 18px; border-radius:6px; margin:16px 0;">
 <strong>Diizinkan</strong>
 
 | Aturan | Contoh valid |
@@ -121,7 +121,7 @@ char kelas[] = "X-PPLG";
 | Kata lebih dari satu suku kata dipisah dengan underscore (`_`) | `nama_lengkap`, `jenis_mobil`, `menu_makanan`, `mata_pelajaran` |
 </div>
 
-<div style="background:#fff8c5; border-left:4px solid #9a6700; padding:14px 18px; border-radius:6px; margin:16px 0;">
+<div markdown="1" style="background:#fff8c5; border-left:4px solid #9a6700; padding:14px 18px; border-radius:6px; margin:16px 0;">
 <strong>Tidak Diizinkan</strong>
 
 | Aturan | Contoh tidak valid | Alasan |
@@ -140,13 +140,13 @@ char kelas[] = "X-PPLG";
 ### Kategori Tipe Data di C
 
 1. **Tipe data primitif / bawaan** (*primary/built-in*) — `int`, `char`, `float`, `double`
-2. **Tipe data turunan** (*derived*) — `array`, `pointer`, `reference`
+2. **Tipe data turunan** (*derived*) — array, pointer, reference
 
 Fokus pembahasan kali ini ada di tipe data primitif.
 
 ### Jenis Tipe Data Primitif
 
-<div style="background:#f2ebff; border-left:4px solid #8250df; padding:14px 18px; border-radius:6px; margin:16px 0;">
+<div markdown="1" style="background:#f2ebff; border-left:4px solid #8250df; padding:14px 18px; border-radius:6px; margin:16px 0;">
 
 | Tipe | Fungsi | Contoh nilai |
 |---|---|---|
@@ -169,7 +169,7 @@ char kelas[] = "X-PPLG";    // string, tersimpan sebagai array of char
 
 ### Format Specifier
 
-<div style="background:#ddf4ff; border-left:4px solid #218bff; padding:14px 18px; border-radius:6px; margin:16px 0;">
+<div markdown="1" style="background:#ddf4ff; border-left:4px solid #218bff; padding:14px 18px; border-radius:6px; margin:16px 0;">
 Format specifier digunakan untuk menghubungkan sebuah variabel dengan fungsi <code>printf()</code> agar nilainya bisa ditampilkan sesuai tipe datanya.
 
 | Tipe Data | Format Specifier |
@@ -189,7 +189,7 @@ Kalian mungkin memperhatikan tanda `\n` pada beberapa contoh program sebelumnya 
 
 **Escape sequence** adalah kombinasi karakter yang diawali tanda backslash (`\`) untuk merepresentasikan karakter khusus yang tidak bisa langsung diketik atau punya fungsi tersendiri (seperti pindah baris atau tab), bukan untuk ditampilkan apa adanya.
 
-<div style="background:#ddf4ff; border-left:4px solid #218bff; padding:14px 18px; border-radius:6px; margin:16px 0;">
+<div markdown="1" style="background:#ddf4ff; border-left:4px solid #218bff; padding:14px 18px; border-radius:6px; margin:16px 0;">
 
 | Escape Sequence | Fungsi |
 |:-:|---|
@@ -221,7 +221,7 @@ Farid	X-PPLG
 Dia berkata: "Semangat belajar!"
 ```
 
-<div style="background:#fff8c5; border-left:4px solid #9a6700; padding:14px 18px; border-radius:6px; margin:16px 0;">
+<div markdown="1" style="background:#fff8c5; border-left:4px solid #9a6700; padding:14px 18px; border-radius:6px; margin:16px 0;">
 <strong>Perhatian</strong><br>
 Tanpa <code>\n</code>, seluruh hasil <code>printf()</code> akan tercetak menyambung dalam satu baris meskipun ditulis di baris kode yang berbeda-beda. Ini adalah kesalahan yang cukup sering terjadi pada pemula.
 </div>
