@@ -59,6 +59,12 @@ int main() {
 }
 ```
 
+**Output:**
+
+```
+Hello World
+```
+
 <div markdown="1" style="background:#ddf4ff; border-left:4px solid #218bff; padding:14px 18px; border-radius:6px; margin:16px 0;">
 
 **Catatan**
