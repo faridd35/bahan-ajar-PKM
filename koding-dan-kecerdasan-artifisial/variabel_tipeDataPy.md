@@ -498,6 +498,35 @@ print(f"Luas Permukaan Balok: {luas}")
 print(f"Volume: {volume}")
 ```
 
+**Input:**
+
+```
+Silahkan Masukkan Nama Kamu Terlebih Dahulu: Farid
+
+Masukkan Panjang nya: 10
+Masukkan Lebar nya: 10
+Masukkan Tinggi nya: 10
+```
+
+**Output:**
+
+```
+-- Selamat Datang di Program Menghitung Luas Permukaan dan Volume Balok
+Silahkan Masukkan Nama Kamu Terlebih Dahulu: Farid
+
+Halo Farid! Silahkan Masukkan Angka nya!
+Masukkan Panjang nya: 10
+Masukkan Lebar nya: 10
+Masukkan Tinggi nya: 10
+
+=== Hasil Perhitungan ===
+Panjang: 10.0
+Lebar: 10.0
+Tinggi: 10.0
+Luas Permukaan Balok: 600
+Volume: 1000
+```
+
 ### Penjelasan Ringkas
 
 <div style="background:#f2ebff; border-left:4px solid #8250df; padding:14px 18px; border-radius:6px; margin:16px 0;">
