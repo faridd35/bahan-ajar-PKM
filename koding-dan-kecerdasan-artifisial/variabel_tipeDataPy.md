@@ -133,9 +133,11 @@ Untuk melihat tipe data yang secara otomatis ditentukan oleh Python, gunakan fun
 ```python
 x = 5
 y = 'Kantin Tefa'
+z = 3.14
 
 print(type(x))   # <class 'int'>
 print(type(y))   # <class 'str'>
+print(type(z))   # <class 'float'>
 ```
 
 ### Aturan Penamaan Variabel
@@ -180,15 +182,15 @@ Nama variabel bisa pendek seperti `x` dan `y`, atau lebih deskriptif seperti `na
 <tbody>
 <tr>
 <td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Dimulai angka atau simbol</td>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">identifier harus diawali huruf atau underscore</td>
+<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Identifier harus diawali huruf atau underscore</td>
 </tr>
 <tr>
 <td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Mengandung spasi atau simbol selain underscore</td>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">hanya alfanumerik dan underscore yang diizinkan</td>
+<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Hanya alfanumerik dan underscore yang diizinkan</td>
 </tr>
 <tr>
 <td style="padding:8px 10px; font-size:0.9em;">Memakai <em>reserved word</em> Python</td>
-<td style="padding:8px 10px; font-size:0.9em;">kata tersebut sudah dipakai sebagai sintaks Python, contoh: <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">print</code>, <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">if</code>, <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">class</code></td>
+<td style="padding:8px 10px; font-size:0.9em;">Kata tersebut sudah dipakai sebagai sintaks Python, contoh: <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">print</code>, <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">if</code>, <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">class</code></td>
 </tr>
 </tbody>
 </table>
@@ -273,7 +275,7 @@ print(type(angka_desimal))   # <class 'float'>
 print(type(angka_kompleks))  # <class 'complex'>
 ```
 
-> Beda dengan bahasa C yang mengharuskan kita menuliskan tipe data secara eksplisit saat deklarasi (`int angka = 10;`), di Python cukup tulis angkanya saja — ada tanda titik desimal atau tidak itulah yang otomatis menentukan tipenya. Angka `10` otomatis menjadi `int`, sedangkan `10.0` otomatis menjadi `float`.
+> Beda dengan bahasa C yang mengharuskan kita menuliskan tipe data secara saat deklarasi variabel (`int angka = 10;`), di Python cukup tulis angkanya saja, maka Python akan mendeteksi apakah ada tanda titik desimal atau tidak dan otomatis menentukan tipenya. Angka `10` otomatis menjadi `int`, sedangkan `10.0` otomatis menjadi `float`.
 >
 > Tipe `complex` jarang dipakai dalam pemrograman dasar sehari-hari, cukup dikenali namanya saja untuk sekarang.
 
@@ -281,7 +283,7 @@ print(type(angka_kompleks))  # <class 'complex'>
 
 **String** adalah kumpulan karakter atau teks.
 
-Variabel yang berisi data string di Python bisa dideklarasikan menggunakan tanda kutip satu (*single quotes*) maupun tanda kutip dua (*double quotes*) — keduanya sama saja dan bisa dipilih bebas.
+Variabel yang berisi data string di Python bisa dideklarasikan menggunakan tanda kutip satu (*single quotes*) maupun tanda kutip dua (*double quotes*). Keduanya sama saja dan bisa dipilih bebas.
 
 ```python
 x = "Kantin Tefa"
@@ -547,46 +549,7 @@ Luas Permukaan Balok: 600
 Volume: 1000
 ```
 
-### Penjelasan Ringkas
-
-<div style="background:#f2ebff; border-left:4px solid #8250df; padding:14px 18px; border-radius:6px; margin:16px 0;">
-<table style="width:100%; border-collapse:collapse; margin-top:4px;">
-<thead>
-<tr>
-<th style="text-align:left; padding:8px 10px; border-bottom:2px solid rgba(0,0,0,0.15); font-size:0.9em;">Bagian Kode</th>
-<th style="text-align:left; padding:8px 10px; border-bottom:2px solid rgba(0,0,0,0.15); font-size:0.9em;">Konsep yang Diterapkan</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;"><code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;"># Ini adalah Komentar Singleline</code></td>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Komentar satu baris — dipakai untuk menandai bagian-bagian program</td>
-</tr>
-<tr>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;"><code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">nama = input(...)</code> lalu ditampilkan dengan f-string</td>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;"><code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">input()</code> untuk menerima teks, langsung dipakai di f-string tanpa casting (karena tetap dipakai sebagai teks)</td>
-</tr>
-<tr>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;"><code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">'''...'''</code> di atas bagian input angka</td>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Komentar multiline — menjelaskan blok kode yang lebih panjang, yaitu alasan casting <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">float</code> diperlukan</td>
-</tr>
-<tr>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;"><code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">panjang = float(input(...))</code></td>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;"><code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">input()</code> dan casting digabung dalam satu baris, langsung diubah ke <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">float</code> agar bisa dihitung dan mendukung desimal</td>
-</tr>
-<tr>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;"><code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">luas = int(2 * (...))</code>, <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">volume = int(...)</code></td>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Hasil perhitungan (otomatis <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">float</code>) di-casting lagi ke <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">int</code> agar ditampilkan sebagai bilangan bulat</td>
-</tr>
-<tr>
-<td style="padding:8px 10px; font-size:0.9em;"><code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">print(f"Luas Permukaan Balok: {luas}")</code></td>
-<td style="padding:8px 10px; font-size:0.9em;">f-string dipakai di seluruh bagian output, menggantikan cara lama (koma atau <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">+</code> dengan casting manual)</td>
-</tr>
-</tbody>
-</table>
-</div>
-
-> Perhatikan alur casting dua arah di program ini: input pengguna (`str`) → **di-casting ke `float`** supaya bisa dihitung → hasil perhitungan (`float`) → **di-casting lagi ke `int`** supaya ditampilkan sebagai bilangan bulat. Ini adalah contoh nyata kenapa memahami casting itu penting — bukan cuma sekali dipakai, tapi bisa berulang sesuai kebutuhan program.
+> **Alur Program**: input pengguna (`str`) → **di-casting ke `float`** supaya bisa dihitung → hasil perhitungan (`float`) → **di-casting lagi ke `int`** supaya ditampilkan sebagai bilangan bulat.
 
 ---
 
