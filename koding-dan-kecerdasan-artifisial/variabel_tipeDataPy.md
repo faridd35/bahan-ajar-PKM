@@ -31,82 +31,17 @@ layout: default
 
 ## Daftar Isi
 
-1. [Review Singkat: Mengenal Python](#1-review-singkat-mengenal-python)
-2. [Indentasi dalam Python](#2-indentasi-dalam-python)
-3. [Variabel dalam Python](#3-variabel-dalam-python)
-4. [Tipe Data dalam Python](#4-tipe-data-dalam-python)
-5. [Komentar dalam Python](#5-komentar-dalam-python)
-6. [Input dan Output](#6-input-dan-output)
-7. [Contoh Program Lengkap](#7-contoh-program-lengkap)
-8. [Perbedaan Python dan C](#8-perbedaan-python-dan-c)
-9. [Rangkuman](#9-rangkuman)
+1. [Variabel dalam Python](#1-variabel-dalam-python)
+2. [Tipe Data dalam Python](#2-tipe-data-dalam-python)
+3. [Komentar dalam Python](#3-komentar-dalam-python)
+4. [Input dan Output](#4-input-dan-output)
+5. [Contoh Program Lengkap](#5-contoh-program-lengkap)
+6. [Perbedaan Python dan C](#6-perbedaan-python-dan-c)
+7. [Rangkuman](#7-rangkuman)
 
 ---
 
-## 1. Review Singkat: Mengenal Python
-
-Sebelum masuk ke variabel dan tipe data, ingat kembali beberapa hal dasar tentang Python yang sudah dibahas pertemuan lalu.
-
-**Python** adalah bahasa pemrograman populer yang dibuat oleh **Guido van Rossum** dan pertama kali dirilis pada **tahun 1991**. Python dikenal karena sintaksnya yang sederhana dan mudah dipahami, mirip dengan bahasa Inggris sehari-hari.
-
-### Karakteristik Python
-
-| Karakteristik | Penjelasan |
-|---|---|
-| Mudah dipelajari | Sintaks yang bersih dan sederhana |
-| *Interpreted language* | Tidak perlu dikompilasi terlebih dahulu sebelum dijalankan |
-| *Cross-platform* | Berjalan di Windows, Mac, dan Linux |
-| *Open source* | Gratis dan bebas digunakan |
-| Serbaguna (*versatile*) | Bisa digunakan untuk berbagai keperluan |
-
-### Kekurangan Python
-
-- Kecepatan eksekusi lebih lambat dibanding bahasa *compiled* (C, C++, Java)
-- Konsumsi memori yang lebih besar
-
-### Python Bisa Digunakan untuk Apa Saja?
-
-- Web development (bagian server)
-- Data Science & Analytics
-- Machine Learning
-- Software development
-- System scripting
-
-Python bisa dijalankan langsung lewat Command Line, atau ditulis dalam sebuah file dengan ekstensi **`.py`**.
-
----
-
-## 2. Indentasi dalam Python
-
-**Indentasi** adalah penambahan spasi atau tab di awal baris kode untuk mengatur struktur, hierarki, dan keterbacaan program.
-
-Di Python, indentasi **sangat penting dan wajib digunakan**, karena berfungsi sebagai pengganti kurung kurawal `{ }` yang biasa dipakai di bahasa lain seperti C.
-
-### Fungsi Utama Indentasi
-
-| Fungsi | Digunakan pada |
-|---|---|
-| Mengatur perulangan | `for`, `while` |
-| Mengatur percabangan | `if`, `elif`, `else` |
-| Membuat fungsi dan class | `def`, `class` |
-
-```python
-# Contoh penggunaan indentasi pada percabangan
-umur = 16
-
-if umur >= 17:
-    print("Sudah cukup umur")
-else:
-    print("Belum cukup umur")
-```
-
-<div style="background:#ddf4ff; border-left:4px solid #218bff; padding:14px 18px; border-radius:6px; margin:16px 0;">
-Perhatikan: baris <code>print(...)</code> menjorok ke dalam (diberi indentasi) karena berada <strong>di dalam</strong> blok <code>if</code>/<code>else</code>. Kesalahan indentasi di Python akan langsung menyebabkan error, bukan sekadar masalah kerapian kode.
-</div>
-
----
-
-## 3. Variabel dalam Python
+## 1. Variabel dalam Python
 
 **Variabel** adalah tempat menyimpan sebuah nilai data.
 
@@ -221,21 +156,18 @@ x = y = z = "Halo"
 
 ---
 
-## 4. Tipe Data dalam Python
+## 2. Tipe Data dalam Python
 
 **Tipe data** adalah pengelompokan jenis nilai yang bisa disimpan oleh sebuah variabel. Setiap tipe data memiliki fungsi dan karakteristiknya masing-masing.
 
-| Kategori | Tipe Data |
-|---|---|
-| Tipe numerik | `int`, `float`, `complex` |
-| Tipe teks | `str` |
-| Tipe boolean | `bool` |
-| Tipe urutan | `list`, `tuple`, `range` |
-| Tipe None | `NoneType` |
+### Kategori Tipe Data di Python
 
-> Fokus pertemuan ini ada pada tiga kategori dasar: **Angka**, **String**, dan **Boolean**. Tipe data yang lebih kompleks seperti `list`, `tuple`, `dict`, dan `set` akan dibahas lebih lanjut di pertemuan berikutnya.
+1. **Tipe data dasar**: `int`, `float`, `complex`, `str`, `bool`
+2. **Tipe data lanjutan**: `list`, `tuple`, `range`, `dict`, `set`, `NoneType`
 
-### 4.1 Tipe Data Angka (Numeric)
+Fokus pembahasan kali ini ada di tipe data dasar, dibagi menjadi tiga kelompok: **Numerik**, **String**, dan **Boolean**.
+
+### 2.1 Tipe Data Angka (Numerik)
 
 <div style="background:#f2ebff; border-left:4px solid #8250df; padding:14px 18px; border-radius:6px; margin:16px 0;">
 <table style="width:100%; border-collapse:collapse; margin-top:4px;">
@@ -280,9 +212,9 @@ print(type(angka_kompleks))  # <class 'complex'>
 >
 > Tipe `complex` jarang dipakai dalam pemrograman dasar sehari-hari, cukup dikenali namanya saja untuk sekarang.
 
-### 4.2 Tipe Data String
+### 2.2 Tipe Data String
 
-**String** adalah kumpulan karakter atau teks.
+Tipe `str` atau `String` adalah kumpulan karakter atau teks. 
 
 Variabel yang berisi data string di Python bisa dideklarasikan menggunakan tanda kutip satu (*single quotes*) maupun tanda kutip dua (*double quotes*). Keduanya sama saja dan bisa dipilih bebas.
 
@@ -292,7 +224,7 @@ x = "Kantin Tefa"
 x = 'Kantin Tefa'
 ```
 
-### 4.3 Tipe Data Boolean
+### 2.3 Tipe Data Boolean
 
 Tipe `bool` (boolean) hanya memiliki dua kemungkinan nilai: `True` atau `False`. Biasanya dipakai untuk menyimpan status atau hasil dari sebuah kondisi.
 
@@ -305,7 +237,7 @@ print(type(status_lulus))   # <class 'bool'>
 
 ---
 
-## 5. Komentar dalam Python
+## 3. Komentar dalam Python
 
 ### Single-line Comment
 
@@ -339,22 +271,10 @@ bisa menggunakan tanda kutip dua sebanyak 3 karakter
 
 ---
 
-## 6. Input dan Output
+## 4. Input dan Output
 
-### Statement dan print()
-
-Dalam sebuah program, **statement** adalah kumpulan instruksi yang kita ketik atau kode yang akan dieksekusi oleh komputer.
-
-```python
-print("Python sangat menyenangkan")
-```
-
-Baris kode di atas adalah contoh sebuah statement. Perlu dicatat: **di Python, statement tidak perlu diakhiri dengan tanda titik koma (`;`)**.
-
-Fungsi `print()` digunakan untuk menampilkan teks atau nilai output. Saat menampilkan teks, kita bisa menggunakan tanda kutip dua (`""`) maupun kutip satu (`''`).
-
-Python bisa langsung mencetak angka, bahkan langsung melakukan operasi matematika di dalam `print()`. Python juga bisa mencetak kombinasi angka dan teks sekaligus, yang dipisahkan dengan tanda koma.
-
+Fungsi `print()` digunakan untuk menampilkan teks atau nilai output ke layar, dan tidak perlu diakhiri titik koma (`;`) seperti di bahasa C.
+ 
 ```python
 print(5 + 3)                      # hasil operasi matematika: 8
 print("Umur saya:", 16, "tahun")  # kombinasi teks dan angka
@@ -379,37 +299,18 @@ umur = int(umur)   # casting dari str menjadi int
 print(umur + 1)</code></pre>
 </div>
 
-### Kesalahan Umum: Menggabungkan String dan Angka
+### Kesalahan Umum dan print(f-string)
 
-Salah satu kesalahan yang paling sering dialami pemula Python adalah mencoba menggabungkan (*concatenate*) string dengan angka menggunakan tanda `+` secara langsung.
-
+Menggabungkan string dan angka langsung dengan `+` akan menyebabkan **error**, karena Python tidak mengizinkan penggabungan `str` dengan `int` secara langsung.
+ 
 ```python
 umur = 16
-print("Umur saya " + umur)        # ERROR! tidak bisa langsung digabung
+print("Umur saya " + umur)         # ERROR! str tidak bisa langsung digabung int
+print("Umur saya " + str(umur))    # BENAR, tapi harus casting manual dulu
+print(f"Umur saya {umur}")         # LEBIH PRAKTIS, pakai f-string
 ```
-
-Kode di atas akan menghasilkan error, karena Python tidak mengizinkan penggabungan tipe data `str` dengan `int` secara langsung menggunakan `+`. Ini berbeda dengan `printf()` di bahasa C, yang otomatis menyesuaikan format lewat format specifier (`%d`, `%s`, dst).
-
-**Solusinya:** ubah dulu angka tersebut menjadi string menggunakan casting `str()`, seperti yang sudah dibahas di bagian Variabel.
-
-```python
-umur = 16
-print("Umur saya " + str(umur))   # BENAR, hasil: Umur saya 16
-```
-
-### f-string: Cara Modern Menggabungkan Teks dan Variabel
-
-Selain memakai tanda koma (seperti pada `print()` sebelumnya) atau `+` dengan casting manual, Python punya cara yang lebih praktis dan lebih umum dipakai: **f-string**.
-
-f-string dibuat dengan menambahkan huruf `f` sebelum tanda kutip, lalu variabel langsung ditulis di dalam kurung kurawal `{ }` tanpa perlu casting manual.
-
-```python
-nama = "Farid"
-umur = 16
-
-print(f"Nama saya {nama}, umur {umur} tahun")
-# Output: Nama saya Farid, umur 16 tahun
-```
+ 
+**f-string** (ditandai huruf `f` sebelum tanda kutip) adalah cara paling praktis menggabungkan teks dan variabel. Caranya cukup tulis nama variabel di dalam kurung kurawal `{ }`, tanpa perlu casting manual dan tanpa risiko error seperti contoh di atas.
 
 <div style="background:#dafbe1; border-left:4px solid #1a7f37; padding:14px 18px; border-radius:6px; margin:16px 0;">
 f-string otomatis mengubah tipe data apa pun (angka, boolean, dll) menjadi teks saat ditampilkan, jadi tidak akan menyebabkan error seperti kasus penggabungan <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">+</code> pada bagian sebelumnya. Ini adalah cara yang lebih direkomendasikan dibanding menggabungkan string secara manual.
@@ -417,7 +318,7 @@ f-string otomatis mengubah tipe data apa pun (angka, boolean, dll) menjadi teks 
 
 ---
 
-## 7. Contoh Program Lengkap
+## 5. Contoh Program Lengkap
 
 Sebagai penerapan dari seluruh materi yang sudah dibahas — variabel, tipe data, casting, komentar, `input()`, dan f-string — berikut contoh program yang menghitung **luas permukaan dan volume balok**, sekaligus menyapa pengguna dengan namanya sendiri.
 
@@ -487,7 +388,7 @@ Volume: 1000
 
 ---
 
-## 8. Perbedaan Python dan C
+## 6. Perbedaan Python dan C
 
 Setelah pertemuan sebelumnya membahas variabel dan tipe data di bahasa **C**, berikut perbandingan langsung dengan **Python** supaya perbedaan formatnya terlihat jelas.
 
@@ -554,15 +455,13 @@ Setelah pertemuan sebelumnya membahas variabel dan tipe data di bahasa **C**, be
 
 ---
 
-## 9. Rangkuman
+## 7. Rangkuman
 
-- Python bersifat *interpreted*, sintaksnya sederhana, dan tidak memerlukan deklarasi tipe data secara eksplisit (*dynamic typing*).
-- **Indentasi** di Python bersifat wajib dan menggantikan fungsi kurung kurawal `{ }` di bahasa C.
-- **Variabel** di Python langsung diisi nilai tanpa deklarasi tipe, dan tipenya bisa diperiksa dengan `type()` atau diubah dengan **casting**. Penamaan variabel mengikuti aturan identifier dan bisa memakai gaya Camel Case, Pascal Case, atau Snake Case.
-- **Tipe data** di Python terbagi dalam beberapa kategori; fokus pertemuan ini pada **Angka** (`int`, `float`, `complex`), **String** (`str`), dan **Boolean** (`bool`).
-- **Komentar** satu baris pakai `#`, komentar banyak baris memakai triple quotes (`'''` atau `"""`) karena Python tidak punya sintaks komentar multi-baris bawaan.
-- **`print()`** menampilkan output, **`input()`** menerima nilai dari pengguna — dan hasil `input()` selalu bertipe `str` sehingga sering perlu di-*casting*.
-- Menggabungkan string dan angka langsung dengan `+` akan menyebabkan **error** — harus di-casting dulu ke `str()`, atau gunakan **f-string** sebagai cara yang lebih praktis.
+- **Variabel** di Python langsung diisi nilai tanpa deklarasi tipe (*dynamic typing*), tipenya bisa diperiksa dengan `type()` atau diubah dengan **casting**.
+- **Tipe data dasar** di Python meliputi kelompok Angka (`int`, `float`, `complex`), String (`str`), dan Boolean (`bool`).
+- **Komentar** satu baris pakai `#`, komentar banyak baris memakai triple quotes (`'''` atau `"""`).
+- **`print()`** menampilkan output, **`input()`** menerima nilai dari pengguna — hasilnya selalu bertipe `str` sehingga sering perlu di-*casting*.
+- Menggabungkan string dan angka langsung dengan `+` menyebabkan **error** — solusinya casting ke `str()`, atau lebih praktis pakai **f-string**.
 - Perbedaan paling mendasar antara Python dan C ada pada sifat tipe datanya: **statis** (C) vs **dinamis** (Python).
 
 ---
