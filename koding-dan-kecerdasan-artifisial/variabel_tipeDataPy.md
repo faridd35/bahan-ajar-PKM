@@ -22,18 +22,17 @@ layout: default
   }
 </style>
 
-# Variabel dan Tipe Data dalam Python
+# Variabel, Tipe Data, Komentar, dan Input dalam Python
 
 > Catatan materi Koding dan Kecerdasan Artifisial
-> Pertemuan: Variabel dan Tipe Data (lanjutan dari Pengenalan Python)
-
+> Kelas X RPL Pertemuan 3
 ---
 
 ## Daftar Isi
 
-1. [Variabel dalam Python](#1-variabel-dalam-python)
-2. [Tipe Data dalam Python](#2-tipe-data-dalam-python)
-3. [Komentar dalam Python](#3-komentar-dalam-python)
+1. [Variabel](#1-variabel)
+2. [Tipe Data](#2-tipe-data)
+3. [Komentar](#3-komentar)
 4. [Input dan Output](#4-input-dan-output)
 5. [Contoh Program Lengkap](#5-contoh-program-lengkap)
 6. [Perbedaan Python dan C](#6-perbedaan-python-dan-c)
@@ -41,7 +40,7 @@ layout: default
 
 ---
 
-## 1. Variabel dalam Python
+## 1. Variabel
 
 **Variabel** adalah tempat menyimpan sebuah nilai data.
 
@@ -156,7 +155,7 @@ x = y = z = "Halo"
 
 ---
 
-## 2. Tipe Data dalam Python
+## 2. Tipe Data
 
 **Tipe data** adalah pengelompokan jenis nilai yang bisa disimpan oleh sebuah variabel. Setiap tipe data memiliki fungsi dan karakteristiknya masing-masing.
 
@@ -237,7 +236,7 @@ print(type(status_lulus))   # <class 'bool'>
 
 ---
 
-## 3. Komentar dalam Python
+## 3. Komentar
 
 ### Single-line Comment
 
