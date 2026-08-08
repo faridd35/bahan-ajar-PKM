@@ -24,8 +24,9 @@ layout: default
 
 # Variabel, Tipe Data, Komentar, dan Input dalam Python
 
-> Catatan materi Koding dan Kecerdasan Artifisial
-> Kelas X RPL Pertemuan 3
+> Catatan materi Koding dan Kecerdasan Artifisial — Kelas X RPL
+> Pertemuan 3
+
 ---
 
 ## Daftar Isi
