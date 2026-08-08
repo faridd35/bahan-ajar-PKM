@@ -208,8 +208,8 @@ print(type(angka_desimal))   # <class 'float'>
 print(type(angka_kompleks))  # <class 'complex'>
 ```
 <div style="background:#dafbe1; border-left:4px solid #1a7f37; padding:14px 18px; border-radius:6px; margin:16px 0;">
-Beda dengan bahasa C yang mengharuskan kita menuliskan tipe data secara saat deklarasi variabel (`int angka = 10;`), di Python cukup tulis angkanya saja, maka Python akan mendeteksi apakah ada tanda titik desimal atau tidak dan otomatis menentukan tipenya. Angka `10` otomatis menjadi `int`, sedangkan `10.0` otomatis menjadi `float`.
-Tipe `complex` jarang dipakai dalam pemrograman dasar sehari-hari, cukup dikenali namanya saja untuk sekarang.
+Beda dengan bahasa C yang mengharuskan kita menuliskan tipe data secara saat deklarasi variabel <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">int angka = 10;</code>, di Python cukup tulis angkanya saja, maka Python akan mendeteksi apakah ada tanda titik desimal atau tidak dan otomatis menentukan tipenya. Angka <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">10</code> otomatis menjadi <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">int</code>, sedangkan <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">10.0</code> otomatis menjadi <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">float</code>.
+Tipe <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">complex</code> jarang dipakai dalam pemrograman dasar sehari-hari, cukup dikenali namanya saja untuk sekarang.
 </div>
 
 ### 2.2 Tipe Data String
