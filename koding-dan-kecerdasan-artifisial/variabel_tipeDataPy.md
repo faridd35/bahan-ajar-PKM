@@ -67,9 +67,10 @@ Sebelum masuk ke variabel dan tipe data, ingat kembali beberapa hal dasar tentan
 ### Python Bisa Digunakan untuk Apa Saja?
 
 - Web development (bagian server)
+- Data Science & Analytics
+- Machine Learning
 - Software development
-- Matematika dan data science
-- Sistem scripting
+- System scripting
 
 Python bisa dijalankan langsung lewat Command Line, atau ditulis dalam sebuah file dengan ekstensi **`.py`**.
 
