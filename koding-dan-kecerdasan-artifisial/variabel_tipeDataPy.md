@@ -37,8 +37,8 @@ layout: default
 4. [Tipe Data dalam Python](#4-tipe-data-dalam-python)
 5. [Komentar dalam Python](#5-komentar-dalam-python)
 6. [Input dan Output](#6-input-dan-output)
-7. [Python vs C: Apa yang Berbeda?](#7-python-vs-c-apa-yang-berbeda)
-8. [Contoh Program Lengkap](#8-contoh-program-lengkap)
+7. [Contoh Program Lengkap](#7-contoh-program-lengkap)
+8. [Perbedaan Python dan C](#8-perbedaan-python-dan-c)
 9. [Rangkuman](#9-rangkuman)
 
 ---
@@ -416,74 +416,7 @@ f-string otomatis mengubah tipe data apa pun (angka, boolean, dll) menjadi teks 
 
 ---
 
-## 7. Python vs C: Apa yang Berbeda?
-
-Setelah pertemuan sebelumnya membahas variabel dan tipe data di bahasa **C**, berikut perbandingan langsung dengan **Python** supaya perbedaan formatnya terlihat jelas.
-
-<div style="background:#f2ebff; border-left:4px solid #8250df; padding:14px 18px; border-radius:6px; margin:16px 0;">
-<table style="width:100%; border-collapse:collapse; margin-top:4px;">
-<thead>
-<tr>
-<th style="text-align:left; padding:8px 10px; border-bottom:2px solid rgba(0,0,0,0.15); font-size:0.9em;">Aspek</th>
-<th style="text-align:left; padding:8px 10px; border-bottom:2px solid rgba(0,0,0,0.15); font-size:0.9em;">Bahasa C</th>
-<th style="text-align:left; padding:8px 10px; border-bottom:2px solid rgba(0,0,0,0.15); font-size:0.9em;">Python</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Deklarasi tipe data</td>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Wajib eksplisit (<code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">int umur = 16;</code>)</td>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Otomatis terdeteksi (<code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">umur = 16</code>)</td>
-</tr>
-<tr>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Akhir baris statement</td>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Wajib titik koma (<code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">;</code>)</td>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Tidak perlu titik koma</td>
-</tr>
-<tr>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Blok kode</td>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Kurung kurawal <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">{ }</code></td>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Indentasi (spasi/tab)</td>
-</tr>
-<tr>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Komentar satu baris</td>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;"><code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">//</code></td>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;"><code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">#</code></td>
-</tr>
-<tr>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Komentar banyak baris</td>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;"><code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">/* ... */</code></td>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Tidak ada bawaan, pakai <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">'''...'''</code></td>
-</tr>
-<tr>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Tipe data string</td>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Tidak ada bawaan, direpresentasikan <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">char[]</code></td>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Ada tipe <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">str</code> bawaan</td>
-</tr>
-<tr>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Tanda kutip untuk teks</td>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Karakter tunggal kutip satu, string kutip dua</td>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Kutip satu/dua bebas untuk string</td>
-</tr>
-<tr>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Mengganti tipe data variabel</td>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Butuh variabel baru dengan tipe berbeda</td>
-<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Casting langsung (<code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">str()</code>, <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">int()</code>)</td>
-</tr>
-<tr>
-<td style="padding:8px 10px; font-size:0.9em;">Mencetak ke layar</td>
-<td style="padding:8px 10px; font-size:0.9em;"><code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">printf()</code> dengan format specifier</td>
-<td style="padding:8px 10px; font-size:0.9em;"><code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">print()</code>, tanpa format specifier</td>
-</tr>
-</tbody>
-</table>
-</div>
-
-> **Poin penting untuk diingat:** C disebut bahasa dengan tipe data *statis* (harus ditentukan di awal dan tidak berubah), sedangkan Python bersifat *dinamis* (tipe data mengikuti nilai yang diberikan, dan fleksibel berubah kapan saja). Ini adalah salah satu perbedaan filosofi paling mendasar antara kedua bahasa ini.
-
----
-
-## 8. Contoh Program Lengkap
+## 7. Contoh Program Lengkap
 
 Sebagai penerapan dari seluruh materi yang sudah dibahas — variabel, tipe data, casting, komentar, `input()`, dan f-string — berikut contoh program yang menghitung **luas permukaan dan volume balok**, sekaligus menyapa pengguna dengan namanya sendiri.
 
@@ -550,6 +483,73 @@ Volume: 1000
 ```
 
 > **Alur Program**: input pengguna (`str`) → **di-casting ke `float`** supaya bisa dihitung → hasil perhitungan (`float`) → **di-casting lagi ke `int`** supaya ditampilkan sebagai bilangan bulat.
+
+---
+
+## 8. Perbedaan Python dan C
+
+Setelah pertemuan sebelumnya membahas variabel dan tipe data di bahasa **C**, berikut perbandingan langsung dengan **Python** supaya perbedaan formatnya terlihat jelas.
+
+<div style="background:#f2ebff; border-left:4px solid #8250df; padding:14px 18px; border-radius:6px; margin:16px 0;">
+<table style="width:100%; border-collapse:collapse; margin-top:4px;">
+<thead>
+<tr>
+<th style="text-align:left; padding:8px 10px; border-bottom:2px solid rgba(0,0,0,0.15); font-size:0.9em;">Aspek</th>
+<th style="text-align:left; padding:8px 10px; border-bottom:2px solid rgba(0,0,0,0.15); font-size:0.9em;">Bahasa C</th>
+<th style="text-align:left; padding:8px 10px; border-bottom:2px solid rgba(0,0,0,0.15); font-size:0.9em;">Python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Deklarasi tipe data</td>
+<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Wajib eksplisit (<code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">int umur = 16;</code>)</td>
+<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Otomatis terdeteksi (<code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">umur = 16</code>)</td>
+</tr>
+<tr>
+<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Akhir baris statement</td>
+<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Wajib titik koma (<code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">;</code>)</td>
+<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Tidak perlu titik koma</td>
+</tr>
+<tr>
+<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Blok kode</td>
+<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Kurung kurawal <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">{ }</code></td>
+<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Indentasi (spasi/tab)</td>
+</tr>
+<tr>
+<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Komentar satu baris</td>
+<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;"><code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">//</code></td>
+<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;"><code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">#</code></td>
+</tr>
+<tr>
+<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Komentar banyak baris</td>
+<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;"><code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">/* ... */</code></td>
+<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Tidak ada bawaan, pakai <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">'''...'''</code></td>
+</tr>
+<tr>
+<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Tipe data string</td>
+<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Tidak ada bawaan, direpresentasikan <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">char[]</code></td>
+<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Ada tipe <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">str</code> bawaan</td>
+</tr>
+<tr>
+<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Tanda kutip untuk teks</td>
+<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Karakter tunggal kutip satu, string kutip dua</td>
+<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Kutip satu/dua bebas untuk string</td>
+</tr>
+<tr>
+<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Mengganti tipe data variabel</td>
+<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Butuh variabel baru dengan tipe berbeda</td>
+<td style="padding:8px 10px; border-bottom:1px solid rgba(0,0,0,0.1); font-size:0.9em;">Casting langsung (<code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">str()</code>, <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">int()</code>)</td>
+</tr>
+<tr>
+<td style="padding:8px 10px; font-size:0.9em;">Mencetak ke layar</td>
+<td style="padding:8px 10px; font-size:0.9em;"><code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">printf()</code> dengan format specifier</td>
+<td style="padding:8px 10px; font-size:0.9em;"><code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">print()</code>, tanpa format specifier</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+> **Poin penting untuk diingat:** C disebut bahasa dengan tipe data *statis* (harus ditentukan di awal dan tidak berubah), sedangkan Python bersifat *dinamis* (tipe data mengikuti nilai yang diberikan, dan fleksibel berubah kapan saja). Ini adalah salah satu perbedaan filosofi paling mendasar antara kedua bahasa ini.
 
 ---
 
