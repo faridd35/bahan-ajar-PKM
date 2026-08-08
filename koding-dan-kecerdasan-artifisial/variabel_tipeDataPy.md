@@ -320,6 +320,39 @@ f-string otomatis mengubah tipe data apa pun (angka, boolean, dll) menjadi teks 
 
 ## 5. Contoh Program Lengkap
 
+### Program Penjumlahan Sederhana dengan fungsi Input
+Program sederhana yang menggunakan fungsi input nama pengguna dan input dua angka untuk dilakukan proses penjumlahan
+```python
+nama = input("Masukkan Nama: ")
+print("Halo", nama, "Silahkan Masukkan Angkanya!")
+
+angka1 = int(input("Masukkan Angka Pertama: "))
+angka2 = int(input("Masukkan Angka Kedua: "))
+
+penjumlahan = angka1 + angka2
+
+print("Hasil Penjumlahan Adalah: ", penjumlahan)
+```
+
+**Input:**
+
+```
+Masukkan Nama: Farid
+
+Masukkan Angka Pertama: 20
+Masukkan Angka Kedua: 30
+```
+
+**Output:**
+```
+Masukkan Nama: Farid
+Halo Farid Silahkan Masukkan Angkanya!
+Masukkan Angka Pertama: 20
+Masukkan Angka Kedua: 30
+Hasil Penjumlahan Adalah:  50
+```
+
+### Program Menghitung Luas Permukaan dan Volume Balok dengan fungsi Input
 Praktek penerapan seluruh materi (variabel, tipe data, casting, komentar, `input()`, dan f-string). Program menghitung **luas permukaan dan volume balok**, serta menampilkan pesan menyapa pengguna dengan input nama dan variabel (panjang, lebar, dan tinggi). 
 
 ```python
