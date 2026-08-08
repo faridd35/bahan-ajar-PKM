@@ -320,7 +320,7 @@ f-string otomatis mengubah tipe data apa pun (angka, boolean, dll) menjadi teks 
 
 ## 5. Contoh Program Lengkap
 
-Sebagai penerapan dari seluruh materi yang sudah dibahas — variabel, tipe data, casting, komentar, `input()`, dan f-string — berikut contoh program yang menghitung **luas permukaan dan volume balok**, sekaligus menyapa pengguna dengan namanya sendiri.
+Praktek penerapan seluruh materi (variabel, tipe data, casting, komentar, `input()`, dan f-string). Program menghitung **luas permukaan dan volume balok**, serta menampilkan pesan menyapa pengguna dengan input nama dan variabel (panjang, lebar, dan tinggi). 
 
 ```python
 # Ini adalah Komentar Singleline
@@ -460,8 +460,8 @@ Setelah pertemuan sebelumnya membahas variabel dan tipe data di bahasa **C**, be
 - **Variabel** di Python langsung diisi nilai tanpa deklarasi tipe (*dynamic typing*), tipenya bisa diperiksa dengan `type()` atau diubah dengan **casting**.
 - **Tipe data dasar** di Python meliputi kelompok Angka (`int`, `float`, `complex`), String (`str`), dan Boolean (`bool`).
 - **Komentar** satu baris pakai `#`, komentar banyak baris memakai triple quotes (`'''` atau `"""`).
-- **`print()`** menampilkan output, **`input()`** menerima nilai dari pengguna — hasilnya selalu bertipe `str` sehingga sering perlu di-*casting*.
-- Menggabungkan string dan angka langsung dengan `+` menyebabkan **error** — solusinya casting ke `str()`, atau lebih praktis pakai **f-string**.
+- **`print()`** menampilkan output, **`input()`** menerima nilai dari pengguna. Secara bawaan tipe nya adalah `str`, sehingga sering perlu di-*casting* untuk keperluan operasi matematika.
+- Menggabungkan string dan angka langsung dengan `+` menyebabkan **error**. Solusinya casting ke `str()`, atau lebih praktis pakai **f-string**.
 - Perbedaan paling mendasar antara Python dan C ada pada sifat tipe datanya: **statis** (C) vs **dinamis** (Python).
 
 ---
