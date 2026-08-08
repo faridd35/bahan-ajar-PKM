@@ -2,6 +2,26 @@
 layout: default
 ---
 
+<style>
+  /* Menyamakan border untuk seluruh tabel di dalam Markdown */
+  table {
+    border-collapse: collapse !important;
+    width: 100%;
+    margin: 12px 0;
+  }
+  
+  /* Menebalkan border header dan isi sel */
+  th, td {
+    border: 2px solid #57606a !important; /* Warna border tebal abu-abu/gelap */
+    padding: 8px 12px !important;
+  }
+
+  /* Opsional: Membuat warna header tabel sedikit lebih tebal/jelas */
+  th {
+    border-bottom: 3px solid #21262d !important;
+  }
+</style>
+
 # Variabel dan Tipe Data dalam Python
 
 > Catatan materi Koding dan Kecerdasan Artifisial
