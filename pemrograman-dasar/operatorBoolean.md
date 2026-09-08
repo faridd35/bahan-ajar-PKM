@@ -243,13 +243,13 @@ Positif? 1
 
 ## 3. Operator Logika
 
-**Operator Logika** adalah simbol yang digunakan untuk melakukan operasi yang menghasilkan nilai boolean (`1`/`true` atau `0`/`false`), dengan cara mengombinasikan atau membalik nilai-nilai boolean lain. Operator ini sering dipakai berdampingan dengan operator perbandingan.
+**Operator Logika** adalah simbol yang digunakan untuk melakukan operasi yang menghasilkan nilai boolean (`1`/`true` atau `0`/`false`), dengan cara mengombinasikan atau membalik nilai-nilai boolean lain. **Operator ini sering dipakai berdampingan dengan operator perbandingan**.
 
 | Operator | Nama | Contoh |
 |---|---|---|
 | `&&` | AND (DAN) | `a && b` |
 | `\|\|` | OR (ATAU) | `a \|\| b` |
-| `!` | NOT (BUKAN/INGKARAN) | `!a` |
+| `!` | NOT (BUKAN) | `!a` |
 
 <div style="background:#dafbe1; border-left:4px solid #1a7f37; padding:14px 18px; border-radius:6px; margin:16px 0;">
 <strong>Operator AND (<code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">&amp;&amp;</code>)</strong> — hasil <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">TRUE</code> hanya jika <em>kedua</em> kondisi terpenuhi.
