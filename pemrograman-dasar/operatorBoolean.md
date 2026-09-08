@@ -355,9 +355,9 @@ Hasil Operasi NOT adalah: 1
 
 ### Contoh Penerapan Operator Logika
 
-- Seorang siswa dinyatakan lulus jika nilai ujian matematika ≥ 75 DAN nilai ujian bahasa ≥ 70.
-- Seorang penonton dapat diskon jika usianya di bawah 12 tahun ATAU usianya di atas 60 tahun.
-- Membeli makanan di kantin menggunakan metode pembayaran digital ATAU tunai.
+- Seorang siswa dinyatakan lulus jika nilai ujian matematika ≥ 75 **DAN** nilai ujian bahasa ≥ 70.
+- Seorang penonton dapat diskon jika usianya di bawah 12 tahun **ATAU** usianya di atas 60 tahun.
+- Membeli makanan di kantin menggunakan metode pembayaran digital **ATAU** tunai.
 - Menampilkan halaman situs hanya jika sistem **TIDAK** sedang dalam mode perbaikan.
 
 ---
@@ -383,19 +383,27 @@ Aturan: penumpang dikenakan tarif TransJakarta jika **tinggi badan minimal 100 c
 #include <stdbool.h>
 
 int main(){
+    // Deklarasi Variabel
     int tinggi;
     int umur;
 
+    // Input Tinggi Badan
     printf("Masukkan Tinggi: ");
     scanf("%d", &tinggi);
+
+    // Menggunakan Operator Perbandingan Untuk Cek Tinggi (True atau False)
     bool cekTinggi = tinggi >= 100;
     printf("Cek Tinggi: %d\n", cekTinggi);
 
+    // Input Umur
     printf("Masukkan Umur: ");
     scanf("%d", &umur);
+
+    // Menggunakan Operator Perbandingan untuk Cek Syarat Umur (True atau False)
     bool cekUmur = umur >= 5;
     printf("Cek Umur: %d\n", cekUmur);
 
+    // Cek Syarat Bayar TJ, yaitu tinggi >= 100 DAN umur >= 5
     bool bayarTJ = cekTinggi && cekUmur;
     printf("Apkh bayar TJ? %d\n", bayarTJ);
 
