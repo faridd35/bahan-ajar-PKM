@@ -316,18 +316,23 @@ int main() {
     int a, b;
     int hasilAND, hasilOR, hasilNOT;
 
+    // Melakukan Input Nilai Boolean Pertama
     printf("Masukkan Logika pertama: ");
     scanf("%d", &a);
 
+    // Melakukan Input Nilai Boolean Kedua
     printf("Masukkan Logika kedua: ");
     scanf("%d", &b);
 
+    // Melakukan Proses Operasi AND
     hasilAND = a && b;
     printf("Hasil Operasi AND adalah: %d\n", hasilAND);
-
+  
+    // Melakukan Proses Operasi OR
     hasilOR = a || b;
     printf("Hasil Operasi OR adalah: %d\n", hasilOR);
 
+    // Melakukan Proses Operasi NOT
     a = !b;
     printf("Hasil Operasi NOT adalah: %d\n", a);
     return 0;
