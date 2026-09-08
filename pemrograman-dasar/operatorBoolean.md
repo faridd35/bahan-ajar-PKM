@@ -2,6 +2,26 @@
 layout: default
 ---
 
+<style>
+  /* Menyamakan border untuk seluruh tabel di dalam Markdown */
+  table {
+    border-collapse: collapse !important;
+    width: 100%;
+    margin: 12px 0;
+  }
+  
+  /* Menebalkan border header dan isi sel */
+  th, td {
+    border: 2px solid #57606a !important; /* Warna border tebal abu-abu/gelap */
+    padding: 8px 12px !important;
+  }
+
+  /* Opsional: Membuat warna header tabel sedikit lebih tebal/jelas */
+  th {
+    border-bottom: 3px solid #21262d !important;
+  }
+</style>
+
 # Boolean, Operator Perbandingan, dan Operator Logika dalam Bahasa C
 
 > Catatan materi Pemrograman Dasar — Kelas X RPL
@@ -57,15 +77,12 @@ C menyediakan header standar **`<stdbool.h>`** yang mendefinisikan tipe `bool` b
 int main() {
     int a = 1;
     int b = 0;
-    int angka = -10;
 
     bool hasil = a != b;
-    bool nilai_positif = angka > 0;
 
     printf("Nilai a adalah true: %d\n", a);
     printf("Nilai b adalah false: %d\n", b);
     printf("Hasil operator perbandingan: %d\n", hasil);
-    printf("Apakah angka %d termasuk nilai positif? %d\n", angka, nilai_positif);
 
     return 0;
 }
@@ -77,17 +94,15 @@ int main() {
 Nilai a adalah true: 1
 Nilai b adalah false: 0
 Hasil operator perbandingan: 1
-Apakah angka -10 termasuk nilai positif? 0
 ```
 
 ### Contoh Penerapan Boolean
 
-- Menyimpan status login pengguna (sudah login atau belum)
+- Menyimpan status login pengguna
 - Menandai apakah suatu tugas sudah selesai atau belum
 - Menyimpan status ketersediaan stok barang (tersedia/habis)
-- Menandai apakah suatu fitur pada aplikasi sedang aktif atau nonaktif
-- Memvalidasi apakah umur pengguna sudah mencukupi syarat, misalnya untuk pendaftaran akun
-
+- Memvalidasi apakah umur pengguna sudah mencukupi syarat atau belum
+  
 **Contoh program — validasi umur:**
 
 ```c
@@ -185,12 +200,6 @@ int main() {
     int hasil = a == b;
 
     printf("Hasil perbandingan adalah: %d\n", hasil);
-
-    int angka = 20;
-    int positif = angka > 0;
-
-    printf("Positif? %d\n", positif);
-
     return 0;
 }
 ```
@@ -199,16 +208,13 @@ int main() {
 
 ```
 Hasil perbandingan adalah: 0
-Positif? 1
 ```
 
 ### Contoh Penerapan Operator Perbandingan
 
 - Memvalidasi apakah umur pengguna sudah memenuhi syarat, misalnya `umur >= 17`
 - Mengecek apakah nilai ujian siswa sudah mencapai standar kelulusan (KKM)
-- Membandingkan harga beberapa produk untuk mencari yang termurah
 - Mengecek kesesuaian password yang diinput pengguna dengan password yang tersimpan
-- Mengecek apakah stok barang di gudang mencukupi untuk sebuah pesanan
 - Mengecek apakah suatu angka termasuk bilangan positif atau bukan
 
 **Contoh program — mengecek bilangan positif:**
@@ -219,7 +225,7 @@ Positif? 1
 
 int main () {
     int angka = 20;
-    int positif = angka > 0;
+    bool positif = angka > 0;
 
     printf("Positif? %d\n", positif);
 
@@ -328,7 +334,7 @@ int main() {
 }
 ```
 
-Jika pengguna memasukkan `1` untuk logika pertama dan `0` untuk logika kedua:
+Jika pengguna memasukkan `1` (true) untuk logika pertama dan `0` (false) untuk logika kedua:
 
 **Output:**
 
@@ -344,11 +350,10 @@ Hasil Operasi NOT adalah: 1
 
 ### Contoh Penerapan Operator Logika
 
-- Memvalidasi form pendaftaran: nama tidak boleh kosong **DAN** format email harus valid
-- Mengecek hak akses sistem: pengguna boleh masuk jika rolenya admin **ATAU** superadmin
-- Menentukan kelulusan siswa: nilai ujian mencapai KKM **DAN** kehadiran mencukupi
-- Sistem keamanan pintu otomatis: pintu terbuka jika kartu akses valid **ATAU** sidik jari valid
-- Menampilkan halaman situs hanya jika sistem **TIDAK** sedang dalam mode maintenance
+- Seorang siswa dinyatakan lulus jika nilai ujian matematika ≥ 75 DAN nilai ujian bahasa ≥ 70.
+- Seorang penonton dapat diskon jika usianya di bawah 12 tahun ATAU usianya di atas 60 tahun.
+- Membeli makanan di kantin menggunakan metode pembayaran digital ATAU tunai.
+- Menampilkan halaman situs hanya jika sistem **TIDAK** sedang dalam mode perbaikan.
 
 ---
 
@@ -360,7 +365,7 @@ Ketiga materi ini saling berkaitan erat:
 2. **Operator Perbandingan** adalah cara paling umum untuk *menghasilkan* nilai boolean, dengan membandingkan dua nilai (misalnya `umur >= 17`).
 3. **Operator Logika** digunakan untuk *mengombinasikan* beberapa nilai boolean (biasanya hasil dari beberapa operator perbandingan sekaligus) menjadi satu kesimpulan akhir.
 
-**Contoh gabungan ketiganya — studi kasus syarat bayar TransJakarta:**
+**Contoh Penerapan Operator Perbandingan dan Logika — Studi Kasus Syarat Bayar TransJakarta:**
 
 Aturan: penumpang dikenakan tarif TransJakarta jika **tinggi badan minimal 100 cm** DAN **umur minimal 5 tahun**.
 
