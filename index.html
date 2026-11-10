@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bahan Ajar PKM - Modul & Pembelajaran</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --bg-body: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+      --c-tag-bg: #dbeafe;
+      --c-tag-text: #1e40af;
+      --py-tag-bg: #fef3c7;
+      --py-tag-text: #92400e;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background-color: var(--bg-body); color: var(--text-main); line-height: 1.6; }
+
+    /* Hero Header */
+    .hero {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      color: #ffffff;
+      padding: 60px 20px;
+      text-align: center;
+      border-bottom: 4px solid var(--primary);
+    }
+    .hero h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 10px; }
+    .hero p { font-size: 1.1rem; color: #94a3b8; max-width: 600px; margin: 0 auto 24px; }
+
+    /* Control Panel (Search & Filter) */
+    .controls-container {
+      max-width: 1050px;
+      margin: -28px auto 30px;
+      padding: 0 20px;
+    }
+    .controls-wrapper {
+      background: var(--card-bg);
+      padding: 16px 20px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .filter-tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+    .tab-btn {
+      border: none;
+      background: #f1f5f9;
+      color: var(--text-muted);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-size: 0.9rem;
+    }
+    .tab-btn:hover { background: #e2e8f0; color: var(--text-main); }
+    .tab-btn.active { background: var(--primary); color: #fff; }
+
+    .search-input {
+      padding: 8px 16px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      outline: none;
+      font-size: 0.9rem;
+      width: 240px;
+      transition: border-color 0.2s;
+    }
+    .search-input:focus { border-color: var(--primary); }
+
+    /* Main Container */
+    .main-content { max-width: 1050px; margin: 0 auto 60px; padding: 0 20px; }
+
+    /* Cards Grid */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 24px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px -6px rgba(0,0,0,0.08);
+      border-color: var(--primary);
+    }
+    .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    .badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .badge-c { background: var(--c-tag-bg); color: var(--c-tag-text); }
+    .badge-py { background: var(--py-tag-bg); color: var(--py-tag-text); }
+
+    .card-title { font-size: 1.1rem; font-weight: 700; color: var(--text-main); margin-bottom: 8px; }
+    .card-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
+    .card-footer {
+      margin-top: 20px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--border-color);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid var(--border-color); }
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>📚 Bahan Ajar PKM</h1>
+    <p>Portal materi, catatan pertemuan, dan rangkuman praktikum terpadu.</p>
+  </header>
+
+  <!-- Filter & Search Controls -->
+  <div class="controls-container">
+    <div class="controls-wrapper">
+      <div class="filter-tabs">
+        <button class="tab-btn active" onclick="filterCards('all')">Semua Materi</button>
+        <button class="tab-btn" onclick="filterCards('cpp')">💻 Pemrograman C/C++</button>
+        <button class="tab-btn" onclick="filterCards('python')">🐍 Koding & AI (Python)</button>
+      </div>
+      <input type="text" id="searchInput" class="search-input" placeholder="Cari judul materi..." onkeyup="searchCards()">
+    </div>
+  </div>
+
+  <!-- Main Grid -->
+  <main class="main-content">
+    <div class="grid-container" id="cardsGrid">
+
+      <!-- Group: C/C++ -->
+      <a href="pemrograman-dasar/bahasa-pemrograman.html" class="card" data-category="cpp">
+        <div>
+          <div class="card-header">
+            <span class="badge badge-c">C / C++</span>
+          </div>
+          <h2 class="card-title">Bahasa Pemrograman</h2>
+          <p class="card-desc">Pengenalan konsep dasar instruksi komputer dan kompilasi program.</p>
+        </div>
+        <div class="card-footer">Buka Materi &rarr;</div>
+      </a>
+
+      <a href="pemrograman-dasar/pengenalan-c.html" class="card" data-category="cpp">
+        <div>
+          <div class="card-header">
+            <span class="badge badge-c">C / C++</span>
+          </div>
+          <h2 class="card-title">Pengenalan Bahasa C</h2>
+          <p class="card-desc">Struktur dasar kode program C, fungsi <code>main()</code>, dan sintaks dasar.</p>
+        </div>
+        <div class="card-footer">Buka Materi &rarr;</div>
+      </a>
+
+      <a href="pemrograman-dasar/variabel_tipeData.html" class="card" data-category="cpp">
+        <div>
+          <div class="card-header">
+            <span class="badge badge-c">C / C++</span>
+          </div>
+          <h2 class="card-title">Komentar, Variabel & Tipe Data</h2>
+          <p class="card-desc">Deklarasi variabel, tipe data dasar (int, float, char), dan pengkodean bersih.</p>
+        </div>
+        <div class="card-footer">Buka Materi &rarr;</div>
+      </a>
+
+      <a href="pemrograman-dasar/operatorBoolean.html" class="card" data-category="cpp">
+        <div>
+          <div class="card-header">
+            <span class="badge badge-c">C / C++</span>
+          </div>
+          <h2 class="card-title">Boolean & Operator Logika</h2>
+          <p class="card-desc">Ekspresi boolean, operator perbandingan (<code>&gt;, &lt;, ==</code>), dan logika (<code>&amp;&amp;, ||, !</code>).</p>
+        </div>
+        <div class="card-footer">Buka Materi &rarr;</div>
+      </a>
+
+      <a href="pemrograman-dasar/percabangan.html" class="card" data-category="cpp">
+        <div>
+          <div class="card-header">
+            <span class="badge badge-c">C / C++</span>
+          </div>
+          <h2 class="card-title">Struktur Kontrol Percabangan</h2>
+          <p class="card-desc">Pengambilan keputusan program menggunakan <code>if</code>, <code>else if</code>, <code>else</code>, dan <code>switch</code>.</p>
+        </div>
+        <div class="card-footer">Buka Materi &rarr;</div>
+      </a>
+
+      <!-- Group: Python -->
+      <a href="koding-dan-kecerdasan-artifisial/computational-thinking.html" class="card" data-category="python">
+        <div>
+          <div class="card-header">
+            <span class="badge badge-py">Python & AI</span>
+          </div>
+          <h2 class="card-title">Computational Thinking</h2>
+          <p class="card-desc">Dekomposisi, pengenalan pola, abstraksi, dan perancangan algoritma sistematis.</p>
+        </div>
+        <div class="card-footer">Buka Materi &rarr;</div>
+      </a>
+
+      <a href="koding-dan-kecerdasan-artifisial/pengenalan-python.html" class="card" data-category="python">
+        <div>
+          <div class="card-header">
+            <span class="badge badge-py">Python & AI</span>
+          </div>
+          <h2 class="card-title">Pengenalan Bahasa Python</h2>
+          <p class="card-desc">Keunggulan Python, sintaks yang bersih, serta cara menjalankan script.</p>
+        </div>
+        <div class="card-footer">Buka Materi &rarr;</div>
+      </a>
+
+      <a href="koding-dan-kecerdasan-artifisial/variabel_tipeDataPy.html" class="card" data-category="python">
+        <div>
+          <div class="card-header">
+            <span class="badge badge-py">Python & AI</span>
+          </div>
+          <h2 class="card-title">Variables & Tipe Data Python</h2>
+          <p class="card-desc">Penggunaan tipe data dinamis, pemformatan string, dan komentar di Python.</p>
+        </div>
+        <div class="card-footer">Buka Materi &rarr;</div>
+      </a>
+
+      <a href="koding-dan-kecerdasan-artifisial/operator.html" class="card" data-category="python">
+        <div>
+          <div class="card-header">
+            <span class="badge badge-py">Python & AI</span>
+          </div>
+          <h2 class="card-title">Operator di Python</h2>
+          <p class="card-desc">Penggunaan operator aritmatika, penugasan, perbandingan, dan logika pada Python.</p>
+        </div>
+        <div class="card-footer">Buka Materi &rarr;</div>
+      </a>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>Bahan Ajar PKM &bull; Dikelola oleh <strong>faridd35</strong></p>
+  </footer>
+
+  <script>
+    function filterCards(category) {
+      const cards = document.querySelectorAll('.card');
+      const buttons = document.querySelectorAll('.tab-btn');
+
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    function searchCards() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const cards = document.querySelectorAll('.card');
+
+      cards.forEach(card => {
+        const title = card.querySelector('.card-title').innerText.toLowerCase();
+        const desc = card.querySelector('.card-desc').innerText.toLowerCase();
+        if (title.includes(input) || desc.includes(input)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
