@@ -1,301 +1,314 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bahan Ajar PKM - Modul & Pembelajaran</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #2563eb;
-      --primary-hover: #1d4ed8;
-      --bg-body: #f8fafc;
-      --card-bg: #ffffff;
-      --text-main: #0f172a;
-      --text-muted: #64748b;
-      --border-color: #e2e8f0;
-      --c-tag-bg: #dbeafe;
-      --c-tag-text: #1e40af;
-      --py-tag-bg: #fef3c7;
-      --py-tag-text: #92400e;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background-color: var(--bg-body); color: var(--text-main); line-height: 1.6; }
-
-    /* Hero Header */
-    .hero {
-      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-      color: #ffffff;
-      padding: 60px 20px;
-      text-align: center;
-      border-bottom: 4px solid var(--primary);
-    }
-    .hero h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 10px; }
-    .hero p { font-size: 1.1rem; color: #94a3b8; max-width: 600px; margin: 0 auto 24px; }
-
-    /* Control Panel (Search & Filter) */
-    .controls-container {
-      max-width: 1050px;
-      margin: -28px auto 30px;
-      padding: 0 20px;
-    }
-    .controls-wrapper {
-      background: var(--card-bg);
-      padding: 16px 20px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .filter-tabs { display: flex; gap: 8px; flex-wrap: wrap; }
-    .tab-btn {
-      border: none;
-      background: #f1f5f9;
-      color: var(--text-muted);
-      padding: 8px 16px;
-      border-radius: 8px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      font-size: 0.9rem;
-    }
-    .tab-btn:hover { background: #e2e8f0; color: var(--text-main); }
-    .tab-btn.active { background: var(--primary); color: #fff; }
-
-    .search-input {
-      padding: 8px 16px;
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      outline: none;
-      font-size: 0.9rem;
-      width: 240px;
-      transition: border-color 0.2s;
-    }
-    .search-input:focus { border-color: var(--primary); }
-
-    /* Main Container */
-    .main-content { max-width: 1050px; margin: 0 auto 60px; padding: 0 20px; }
-
-    /* Cards Grid */
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 24px;
-      text-decoration: none;
-      color: inherit;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-    }
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 24px -6px rgba(0,0,0,0.08);
-      border-color: var(--primary);
-    }
-    .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-    .badge {
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 20px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .badge-c { background: var(--c-tag-bg); color: var(--c-tag-text); }
-    .badge-py { background: var(--py-tag-bg); color: var(--py-tag-text); }
-
-    .card-title { font-size: 1.1rem; font-weight: 700; color: var(--text-main); margin-bottom: 8px; }
-    .card-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
-    .card-footer {
-      margin-top: 20px;
-      padding-top: 12px;
-      border-top: 1px dashed var(--border-color);
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--primary);
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    footer { text-align: center; padding: 24px; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid var(--border-color); }
-    .hidden { display: none !important; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Catatan Materi Kejuruan PPLG (SMKN 21)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+tailwind.config = { theme: { extend: { fontFamily: {
+  sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+  mono: ['"JetBrains Mono"', 'ui-monospace', 'Menlo', 'monospace'] } } } }
+</script>
+<style>
+  :root { box-sizing: border-box; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); color-scheme: light; }
+  html { scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 96px); scroll-behavior: smooth; background: #f8fafc; }
+  body { background: #f8fafc; -webkit-font-smoothing: antialiased; }
+  .k { color: #c4b5fd; } .t { color: #7dd3fc; } .s { color: #86efac; }
+  .c { color: #64748b; font-style: italic; } .n { color: #fdba74; } .f { color: #fde68a; }
+  .prose-doc p { color: #475569; line-height: 1.8; }
+  .prose-doc code.i { font-family: 'JetBrains Mono', monospace; font-size: .85em; background: #f1f5f9; color: #1e293b; padding: .15em .4em; border-radius: .375rem; }
+  .toc-link[data-active="true"] { color: #2563eb; border-color: #2563eb; }
+  .nav-link[data-active="true"] { color: #0f172a; background: #fff; box-shadow: 0 0 0 1px #f1f5f9; }
+  .nav-link[data-active="true"] .dot { background: #2563eb; }
+</style>
 </head>
-<body>
+<body class="font-sans text-slate-900 min-h-screen">
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <h1>📚 Bahan Ajar PKM</h1>
-    <p>Portal materi, catatan pertemuan, dan rangkuman praktikum terpadu.</p>
-  </header>
+<!-- ============ VIEW 1: MENU UTAMA ============ -->
+<div id="view-home" hidden>
+  <div class="mx-auto max-w-6xl px-6 pt-20 pb-10 sm:pt-28">
+    <p class="text-sm font-semibold text-blue-600">Catatan Materi Kejuruan PPLG (SMKN 21)</p>
+    <h1 class="mt-3 max-w-2xl text-4xl font-extrabold tracking-tight sm:text-5xl">Catatan materi rangkuman pertemuan.</h1>
+    <p class="mt-5 max-w-xl text-lg leading-relaxed text-slate-500">Kumpulan catatan pertemuan dan rangkuman praktikum Mata Pelajaran (1) Pemrograman Dasar (C); (2) Koding dan Kecerdasan Artifisial (Python).</p>
+  </div>
 
-  <!-- Filter & Search Controls -->
-  <div class="controls-container">
-    <div class="controls-wrapper">
-      <div class="filter-tabs">
-        <button class="tab-btn active" onclick="filterCards('all')">Semua Materi</button>
-        <button class="tab-btn" onclick="filterCards('cpp')">💻 Pemrograman C/C++</button>
-        <button class="tab-btn" onclick="filterCards('python')">🐍 Koding & AI (Python)</button>
-      </div>
-      <input type="text" id="searchInput" class="search-input" placeholder="Cari judul materi..." onkeyup="searchCards()">
+  <div class="sticky top-0 z-20 border-y border-slate-100 bg-slate-50/80 backdrop-blur-md" style="padding-top:env(safe-area-inset-top,0px)">
+    <div class="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
+      <div id="filters" class="flex gap-1.5 overflow-x-auto"></div>
+      <label class="relative block sm:w-72">
+        <svg class="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path stroke-linecap="round" d="m20 20-3.5-3.5"/></svg>
+        <input id="search" type="search" placeholder="Cari judul materi…" class="w-full rounded-xl border border-slate-100 bg-white py-2.5 pl-10 pr-4 text-sm outline-none transition focus:border-blue-300 focus:ring-4 focus:ring-blue-100">
+      </label>
     </div>
   </div>
 
-  <!-- Main Grid -->
-  <main class="main-content">
-    <div class="grid-container" id="cardsGrid">
-
-      <!-- Group: C/C++ -->
-      <a href="pemrograman-dasar/bahasa-pemrograman.html" class="card" data-category="cpp">
-        <div>
-          <div class="card-header">
-            <span class="badge badge-c">C / C++</span>
-          </div>
-          <h2 class="card-title">Bahasa Pemrograman</h2>
-          <p class="card-desc">Pengenalan konsep dasar instruksi komputer dan kompilasi program.</p>
-        </div>
-        <div class="card-footer">Buka Materi &rarr;</div>
-      </a>
-
-      <a href="pemrograman-dasar/pengenalan-c.html" class="card" data-category="cpp">
-        <div>
-          <div class="card-header">
-            <span class="badge badge-c">C / C++</span>
-          </div>
-          <h2 class="card-title">Pengenalan Bahasa C</h2>
-          <p class="card-desc">Struktur dasar kode program C, fungsi <code>main()</code>, dan sintaks dasar.</p>
-        </div>
-        <div class="card-footer">Buka Materi &rarr;</div>
-      </a>
-
-      <a href="pemrograman-dasar/variabel_tipeData.html" class="card" data-category="cpp">
-        <div>
-          <div class="card-header">
-            <span class="badge badge-c">C / C++</span>
-          </div>
-          <h2 class="card-title">Komentar, Variabel & Tipe Data</h2>
-          <p class="card-desc">Deklarasi variabel, tipe data dasar (int, float, char), dan pengkodean bersih.</p>
-        </div>
-        <div class="card-footer">Buka Materi &rarr;</div>
-      </a>
-
-      <a href="pemrograman-dasar/operatorBoolean.html" class="card" data-category="cpp">
-        <div>
-          <div class="card-header">
-            <span class="badge badge-c">C / C++</span>
-          </div>
-          <h2 class="card-title">Boolean & Operator Logika</h2>
-          <p class="card-desc">Ekspresi boolean, operator perbandingan (<code>&gt;, &lt;, ==</code>), dan logika (<code>&amp;&amp;, ||, !</code>).</p>
-        </div>
-        <div class="card-footer">Buka Materi &rarr;</div>
-      </a>
-
-      <a href="pemrograman-dasar/percabangan.html" class="card" data-category="cpp">
-        <div>
-          <div class="card-header">
-            <span class="badge badge-c">C / C++</span>
-          </div>
-          <h2 class="card-title">Struktur Kontrol Percabangan</h2>
-          <p class="card-desc">Pengambilan keputusan program menggunakan <code>if</code>, <code>else if</code>, <code>else</code>, dan <code>switch</code>.</p>
-        </div>
-        <div class="card-footer">Buka Materi &rarr;</div>
-      </a>
-
-      <!-- Group: Python -->
-      <a href="koding-dan-kecerdasan-artifisial/computational-thinking.html" class="card" data-category="python">
-        <div>
-          <div class="card-header">
-            <span class="badge badge-py">Python & AI</span>
-          </div>
-          <h2 class="card-title">Computational Thinking</h2>
-          <p class="card-desc">Dekomposisi, pengenalan pola, abstraksi, dan perancangan algoritma sistematis.</p>
-        </div>
-        <div class="card-footer">Buka Materi &rarr;</div>
-      </a>
-
-      <a href="koding-dan-kecerdasan-artifisial/pengenalan-python.html" class="card" data-category="python">
-        <div>
-          <div class="card-header">
-            <span class="badge badge-py">Python & AI</span>
-          </div>
-          <h2 class="card-title">Pengenalan Bahasa Python</h2>
-          <p class="card-desc">Keunggulan Python, sintaks yang bersih, serta cara menjalankan script.</p>
-        </div>
-        <div class="card-footer">Buka Materi &rarr;</div>
-      </a>
-
-      <a href="koding-dan-kecerdasan-artifisial/variabel_tipeDataPy.html" class="card" data-category="python">
-        <div>
-          <div class="card-header">
-            <span class="badge badge-py">Python & AI</span>
-          </div>
-          <h2 class="card-title">Variables & Tipe Data Python</h2>
-          <p class="card-desc">Penggunaan tipe data dinamis, pemformatan string, dan komentar di Python.</p>
-        </div>
-        <div class="card-footer">Buka Materi &rarr;</div>
-      </a>
-
-      <a href="koding-dan-kecerdasan-artifisial/operator.html" class="card" data-category="python">
-        <div>
-          <div class="card-header">
-            <span class="badge badge-py">Python & AI</span>
-          </div>
-          <h2 class="card-title">Operator di Python</h2>
-          <p class="card-desc">Penggunaan operator aritmatika, penugasan, perbandingan, dan logika pada Python.</p>
-        </div>
-        <div class="card-footer">Buka Materi &rarr;</div>
-      </a>
-
-    </div>
+  <main class="mx-auto max-w-6xl px-6 py-12">
+    <div id="grid" class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"></div>
+    <p id="empty" hidden class="py-20 text-center text-slate-400">Tidak ada materi yang cocok dengan pencarian.</p>
   </main>
+  <footer class="border-t border-slate-100 px-6 py-10 text-center text-sm text-slate-400">Catatan Materi · dikelola oleh <span class="font-semibold text-slate-600">Muhammad Farid (PKM UNJ 2026)</span></footer>
+</div>
 
-  <footer>
-    <p>Bahan Ajar PKM &bull; Dikelola oleh <strong>faridd35</strong></p>
-  </footer>
+<!-- ============ VIEW 2: HALAMAN MATERI ============ -->
+<div id="view-doc" hidden>
+  <header class="sticky top-0 z-30 border-b border-slate-100 bg-slate-50/80 backdrop-blur-md" style="padding-top:env(safe-area-inset-top,0px)">
+    <div class="mx-auto flex h-14 max-w-7xl items-center justify-between px-6">
+      <a href="#home" class="group flex items-center gap-2 text-sm font-semibold text-slate-600 transition hover:text-slate-900">
+        <span class="transition-transform duration-300 group-hover:-translate-x-0.5">←</span> Bahan Ajar PKM
+      </a>
+      <span class="hidden text-sm text-slate-400 sm:block">Pemrograman Dasar · Pertemuan 3</span>
+    </div>
+  </header>
 
-  <script>
-    function filterCards(category) {
-      const cards = document.querySelectorAll('.card');
-      const buttons = document.querySelectorAll('.tab-btn');
+  <div class="mx-auto grid max-w-7xl gap-x-12 px-6 py-10 lg:grid-cols-[200px_minmax(0,1fr)] xl:grid-cols-[200px_minmax(0,1fr)_200px]">
+    <!-- Sidebar -->
+    <aside class="lg:sticky lg:top-24 lg:self-start">
+      <details class="group lg:open" id="navDetails">
+        <summary class="flex cursor-pointer list-none items-center justify-between rounded-xl border border-slate-100 bg-white px-4 py-3 text-sm font-semibold lg:hidden">Daftar materi <span class="transition group-open:rotate-180">⌄</span></summary>
+        <p class="mb-3 mt-1 hidden text-xs font-semibold uppercase tracking-widest text-slate-400 lg:block">Materi</p>
+        <nav id="sideNav" class="mt-2 space-y-0.5 lg:mt-0"></nav>
+      </details>
+    </aside>
 
-      buttons.forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
+    <!-- Artikel -->
+    <article class="prose-doc min-w-0 max-w-3xl pt-10 lg:pt-0">
+      <span class="inline-flex rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">Pemrograman Dasar</span>
+      <h1 class="mt-5 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">Komentar, Variabel, dan Tipe Data</h1>
+      <p class="mt-5 text-lg leading-relaxed text-slate-500">Catatan Pemrograman Dasar Kelas X RPL: cara menulis catatan di dalam kode, menyimpan nilai, dan memilih jenis data yang tepat dalam bahasa C.</p>
 
-      cards.forEach(card => {
-        if (category === 'all' || card.getAttribute('data-category') === category) {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.add('hidden');
-        }
-      });
-    }
+      <section id="komentar" class="mt-16">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">1. Komentar</h2>
+        <p class="mt-4"><strong class="font-semibold text-slate-800">Komentar</strong> adalah teks di dalam kode yang diabaikan compiler. Fungsinya murni untuk manusia: menjelaskan alur logika, memudahkan <em>maintenance</em>, dan membantu kolaborasi tim.</p>
+        <div class="mt-6 overflow-x-auto rounded-2xl border border-slate-100 bg-white">
+          <table class="w-full min-w-[480px] text-left text-sm">
+            <thead><tr class="border-b border-slate-100 text-xs uppercase tracking-wider text-slate-400"><th class="px-6 py-4 font-semibold">Jenis</th><th class="px-6 py-4 font-semibold">Sintaks</th><th class="px-6 py-4 font-semibold">Cakupan</th></tr></thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr><td class="px-6 py-4 font-medium text-slate-800">Single-line</td><td class="px-6 py-4 font-mono text-slate-700">// teks</td><td class="px-6 py-4 text-slate-500">Satu baris</td></tr>
+              <tr><td class="px-6 py-4 font-medium text-slate-800">Multi-line</td><td class="px-6 py-4 font-mono text-slate-700">/* teks */</td><td class="px-6 py-4 text-slate-500">Satu hingga banyak baris</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="code mt-6 overflow-hidden rounded-2xl bg-slate-950 shadow-xl shadow-slate-200/60">
+          <div class="flex items-center justify-between border-b border-white/5 px-4 py-3">
+            <div class="flex items-center gap-4"><div class="flex gap-1.5"><i class="h-2.5 w-2.5 rounded-full bg-slate-700"></i><i class="h-2.5 w-2.5 rounded-full bg-slate-700"></i><i class="h-2.5 w-2.5 rounded-full bg-slate-700"></i></div><span class="font-mono text-xs text-slate-500">komentar.c</span></div>
+            <button class="copy rounded-md px-2.5 py-1 text-xs font-medium text-slate-400 transition hover:bg-white/5 hover:text-white">Copy</button>
+          </div>
+<pre class="overflow-x-auto p-6 font-mono text-[13px] leading-7 text-slate-300"><code><span class="c">// Ini adalah komentar single-line</span>
+<span class="k">#include</span> <span class="s">&lt;stdio.h&gt;</span>
 
-    function searchCards() {
-      const input = document.getElementById('searchInput').value.toLowerCase();
-      const cards = document.querySelectorAll('.card');
+<span class="c">/*
+Komentar multi-line untuk
+penjelasan yang lebih panjang.
+*/</span>
+<span class="t">int</span> <span class="f">main</span>() {
+    <span class="c">// Menampilkan teks ke layar</span>
+    <span class="f">printf</span>(<span class="s">"Hello World"</span>);
+    <span class="k">return</span> <span class="n">0</span>;
+}</code></pre>
+        </div>
+      </section>
 
-      cards.forEach(card => {
-        const title = card.querySelector('.card-title').innerText.toLowerCase();
-        const desc = card.querySelector('.card-desc').innerText.toLowerCase();
-        if (title.includes(input) || desc.includes(input)) {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.add('hidden');
-        }
-      });
-    }
-  </script>
+      <section id="variabel" class="mt-20">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">2. Variabel</h2>
+        <p class="mt-4"><strong class="font-semibold text-slate-800">Variabel</strong> adalah tempat penyimpanan data di memori yang diberi nama, dan nilainya bisa dipakai atau diubah selama program berjalan. Bayangkan sebuah kotak berlabel: label adalah nama variabel, isi kotak adalah nilai, dan jenis barang yang boleh masuk adalah tipe data.</p>
+        <div class="mt-6 overflow-x-auto rounded-2xl border border-slate-100 bg-white">
+          <table class="w-full min-w-[480px] text-left text-sm">
+            <thead><tr class="border-b border-slate-100 text-xs uppercase tracking-wider text-slate-400"><th class="px-6 py-4 font-semibold">#</th><th class="px-6 py-4 font-semibold">Bagian</th><th class="px-6 py-4 font-semibold">Keterangan</th></tr></thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr><td class="px-6 py-4 font-mono text-slate-400">1</td><td class="px-6 py-4 font-medium text-slate-800">Nama (identifier)</td><td class="px-6 py-4 text-slate-500">Label untuk memanggil nilai</td></tr>
+              <tr><td class="px-6 py-4 font-mono text-slate-400">2</td><td class="px-6 py-4 font-medium text-slate-800">Tipe data</td><td class="px-6 py-4 text-slate-500">Jenis nilai yang boleh disimpan</td></tr>
+              <tr><td class="px-6 py-4 font-mono text-slate-400">3</td><td class="px-6 py-4 font-medium text-slate-800">Nilai</td><td class="px-6 py-4 text-slate-500">Data aktual di dalam variabel</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="code mt-6 overflow-hidden rounded-2xl bg-slate-950 shadow-xl shadow-slate-200/60">
+          <div class="flex items-center justify-between border-b border-white/5 px-4 py-3">
+            <div class="flex items-center gap-4"><div class="flex gap-1.5"><i class="h-2.5 w-2.5 rounded-full bg-slate-700"></i><i class="h-2.5 w-2.5 rounded-full bg-slate-700"></i><i class="h-2.5 w-2.5 rounded-full bg-slate-700"></i></div><span class="font-mono text-xs text-slate-500">variabel.c</span></div>
+            <button class="copy rounded-md px-2.5 py-1 text-xs font-medium text-slate-400 transition hover:bg-white/5 hover:text-white">Copy</button>
+          </div>
+<pre class="overflow-x-auto p-6 font-mono text-[13px] leading-7 text-slate-300"><code><span class="t">int</span>   angka = <span class="n">10</span>;
+<span class="t">float</span> phi = <span class="n">3.14</span>;
+<span class="t">char</span>  nilai = <span class="s">'A'</span>;
+<span class="t">char</span>  nama[] = <span class="s">"Farid"</span>;</code></pre>
+        </div>
+
+        <h3 class="mt-10 text-lg font-bold tracking-tight text-slate-900">Aturan penamaan</h3>
+        <div class="mt-4 overflow-x-auto rounded-2xl border border-slate-100 bg-white">
+          <table class="w-full min-w-[520px] text-left text-sm">
+            <thead><tr class="border-b border-slate-100 text-xs uppercase tracking-wider text-slate-400"><th class="px-6 py-4 font-semibold">Contoh</th><th class="px-6 py-4 font-semibold">Status</th><th class="px-6 py-4 font-semibold">Alasan</th></tr></thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr><td class="px-6 py-4 font-mono text-slate-700">nama_lengkap</td><td class="px-6 py-4"><span class="rounded-full bg-emerald-50 px-2.5 py-0.5 text-xs font-semibold text-emerald-700">Valid</span></td><td class="px-6 py-4 text-slate-500">Dipisah underscore</td></tr>
+              <tr><td class="px-6 py-4 font-mono text-slate-700">_umur</td><td class="px-6 py-4"><span class="rounded-full bg-emerald-50 px-2.5 py-0.5 text-xs font-semibold text-emerald-700">Valid</span></td><td class="px-6 py-4 text-slate-500">Diawali underscore</td></tr>
+              <tr><td class="px-6 py-4 font-mono text-slate-700">mobil-sport</td><td class="px-6 py-4"><span class="rounded-full bg-rose-50 px-2.5 py-0.5 text-xs font-semibold text-rose-700">Tidak valid</span></td><td class="px-6 py-4 text-slate-500">Tanda <code class="i">-</code> dibaca sebagai pengurangan</td></tr>
+              <tr><td class="px-6 py-4 font-mono text-slate-700">1nama</td><td class="px-6 py-4"><span class="rounded-full bg-rose-50 px-2.5 py-0.5 text-xs font-semibold text-rose-700">Tidak valid</span></td><td class="px-6 py-4 text-slate-500">Tidak boleh diawali angka</td></tr>
+              <tr><td class="px-6 py-4 font-mono text-slate-700">return</td><td class="px-6 py-4"><span class="rounded-full bg-rose-50 px-2.5 py-0.5 text-xs font-semibold text-rose-700">Tidak valid</span></td><td class="px-6 py-4 text-slate-500">Kata kunci (reserved word)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-4 text-sm">Nama variabel bersifat <em>case-sensitive</em>: <code class="i">nama</code> dan <code class="i">Nama</code> adalah dua variabel berbeda.</p>
+      </section>
+
+      <section id="tipe-data" class="mt-20">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">3. Tipe Data</h2>
+        <p class="mt-4">Tipe data menentukan jenis nilai, ukuran memori, dan operasi yang bisa dilakukan. Tipe primitif di C ada empat, lengkap dengan format specifier untuk <code class="i">printf()</code>.</p>
+        <div class="mt-6 overflow-x-auto rounded-2xl border border-slate-100 bg-white">
+          <table class="w-full min-w-[560px] text-left text-sm">
+            <thead><tr class="border-b border-slate-100 text-xs uppercase tracking-wider text-slate-400"><th class="px-6 py-4 font-semibold">Tipe</th><th class="px-6 py-4 font-semibold">Fungsi</th><th class="px-6 py-4 font-semibold">Contoh</th><th class="px-6 py-4 font-semibold">Specifier</th></tr></thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr><td class="px-6 py-4 font-mono font-medium text-blue-600">int</td><td class="px-6 py-4 text-slate-500">Bilangan bulat</td><td class="px-6 py-4 font-mono text-slate-700">1, 2, 3</td><td class="px-6 py-4 font-mono text-slate-700">%d / %i</td></tr>
+              <tr><td class="px-6 py-4 font-mono font-medium text-blue-600">float</td><td class="px-6 py-4 text-slate-500">Desimal, ±6–7 digit</td><td class="px-6 py-4 font-mono text-slate-700">3.14</td><td class="px-6 py-4 font-mono text-slate-700">%f</td></tr>
+              <tr><td class="px-6 py-4 font-mono font-medium text-blue-600">double</td><td class="px-6 py-4 text-slate-500">Desimal, ±15 digit</td><td class="px-6 py-4 font-mono text-slate-700">1.234567890</td><td class="px-6 py-4 font-mono text-slate-700">%lf</td></tr>
+              <tr><td class="px-6 py-4 font-mono font-medium text-blue-600">char</td><td class="px-6 py-4 text-slate-500">Satu karakter, tanda petik satu</td><td class="px-6 py-4 font-mono text-slate-700">'A'</td><td class="px-6 py-4 font-mono text-slate-700">%c</td></tr>
+              <tr><td class="px-6 py-4 font-mono font-medium text-blue-600">char[]</td><td class="px-6 py-4 text-slate-500">String, tanda petik dua</td><td class="px-6 py-4 font-mono text-slate-700">"Farid"</td><td class="px-6 py-4 font-mono text-slate-700">%s</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="mt-6 rounded-2xl border border-blue-100 bg-blue-50/60 p-6">
+          <p class="text-sm font-semibold text-blue-700">Bagaimana dengan string?</p>
+          <p class="mt-2 text-sm !leading-7 !text-slate-600">Bahasa C tidak punya tipe <code class="i">string</code> bawaan. String direpresentasikan sebagai array of char (<code class="i">char[]</code>) dan ditulis dengan tanda petik dua.</p>
+        </div>
+      </section>
+
+      <section id="escape-sequence" class="mt-20">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">4. Escape Sequence</h2>
+        <p class="mt-4">Kombinasi karakter yang diawali backslash (<code class="i">\</code>) untuk karakter khusus yang tidak bisa diketik langsung.</p>
+        <div class="mt-6 overflow-x-auto rounded-2xl border border-slate-100 bg-white">
+          <table class="w-full min-w-[420px] text-left text-sm">
+            <tbody class="divide-y divide-slate-100">
+              <tr><td class="px-6 py-4 font-mono font-medium text-blue-600">\n</td><td class="px-6 py-4 text-slate-500">Pindah ke baris baru</td></tr>
+              <tr><td class="px-6 py-4 font-mono font-medium text-blue-600">\t</td><td class="px-6 py-4 text-slate-500">Tab (indentasi horizontal)</td></tr>
+              <tr><td class="px-6 py-4 font-mono font-medium text-blue-600">\"</td><td class="px-6 py-4 text-slate-500">Menampilkan tanda kutip dua</td></tr>
+              <tr><td class="px-6 py-4 font-mono font-medium text-blue-600">\'</td><td class="px-6 py-4 text-slate-500">Menampilkan tanda kutip satu</td></tr>
+              <tr><td class="px-6 py-4 font-mono font-medium text-blue-600">\\</td><td class="px-6 py-4 text-slate-500">Menampilkan backslash</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="code mt-6 overflow-hidden rounded-2xl bg-slate-950 shadow-xl shadow-slate-200/60">
+          <div class="flex items-center justify-between border-b border-white/5 px-4 py-3">
+            <div class="flex items-center gap-4"><div class="flex gap-1.5"><i class="h-2.5 w-2.5 rounded-full bg-slate-700"></i><i class="h-2.5 w-2.5 rounded-full bg-slate-700"></i><i class="h-2.5 w-2.5 rounded-full bg-slate-700"></i></div><span class="font-mono text-xs text-slate-500">biodata.c</span></div>
+            <button class="copy rounded-md px-2.5 py-1 text-xs font-medium text-slate-400 transition hover:bg-white/5 hover:text-white">Copy</button>
+          </div>
+<pre class="overflow-x-auto p-6 font-mono text-[13px] leading-7 text-slate-300"><code><span class="k">#include</span> <span class="s">&lt;stdio.h&gt;</span>
+
+<span class="t">int</span> <span class="f">main</span>() {
+    <span class="t">char</span> nama[] = <span class="s">"Farid"</span>;
+    <span class="t">int</span> umur = <span class="n">20</span>;
+    <span class="t">float</span> tinggi = <span class="n">170.5</span>;
+
+    <span class="f">printf</span>(<span class="s">"Nama\t: %s\n"</span>, nama);
+    <span class="f">printf</span>(<span class="s">"Umur\t: %d tahun\n"</span>, umur);
+    <span class="f">printf</span>(<span class="s">"Tinggi\t: %.1f cm\n"</span>, tinggi);
+    <span class="k">return</span> <span class="n">0</span>;
+}</code></pre>
+        </div>
+        <div class="mt-6 rounded-2xl border border-amber-100 bg-amber-50/60 p-6">
+          <p class="text-sm font-semibold text-amber-700">Perhatian</p>
+          <p class="mt-2 text-sm !leading-7 !text-slate-600">Tanpa <code class="i">\n</code>, semua hasil <code class="i">printf()</code> tercetak menyambung dalam satu baris. Ini kesalahan yang sering terjadi pada pemula.</p>
+        </div>
+      </section>
+
+      <section id="rangkuman" class="mt-20">
+        <h2 class="text-2xl font-bold tracking-tight text-slate-900">5. Rangkuman</h2>
+        <ul class="mt-5 space-y-3 text-slate-600">
+          <li class="flex gap-3"><span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600"></span>Komentar (<code class="i">//</code> dan <code class="i">/* */</code>) tidak memengaruhi program, tetapi penting untuk dokumentasi.</li>
+          <li class="flex gap-3"><span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600"></span>Variabel terdiri dari nama, tipe data, dan nilai.</li>
+          <li class="flex gap-3"><span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600"></span>Tipe primitif: <code class="i">int</code>, <code class="i">float</code>, <code class="i">double</code>, <code class="i">char</code>. String adalah <code class="i">char[]</code>.</li>
+          <li class="flex gap-3"><span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600"></span>Setiap tipe punya format specifier sendiri pada <code class="i">printf()</code>.</li>
+        </ul>
+      </section>
+    </article>
+
+    <!-- TOC -->
+    <aside class="hidden xl:block xl:sticky xl:top-24 xl:self-start">
+      <p class="text-xs font-semibold uppercase tracking-widest text-slate-400">On this page</p>
+      <nav id="toc" class="mt-4 space-y-px border-l border-slate-100"></nav>
+    </aside>
+  </div>
+</div>
+
+<script>
+/* Data materi. Ubah href sesuai struktur repo GitHub Pages Anda.
+   Item dengan view:true dirender di halaman ini; lainnya membuka file aslinya. */
+const MATERI = [
+  { cat:'cpp', title:'Bahasa Pemrograman', desc:'Pengenalan konsep dasar instruksi komputer dan kompilasi program.', href:'pemrograman-dasar/bahasa-pemrograman.html' },
+  { cat:'cpp', title:'Pengenalan Bahasa C', desc:'Struktur dasar kode program C, fungsi main(), dan sintaks dasar.', href:'pemrograman-dasar/pengenalan-c.html' },
+  { cat:'cpp', title:'Komentar, Variabel & Tipe Data', desc:'Deklarasi variabel, tipe data dasar (int, float, char), dan penulisan kode yang rapi.', href:'#variabel-tipe-data', view:true },
+  { cat:'cpp', title:'Boolean & Operator Logika', desc:'Ekspresi boolean, operator perbandingan, dan operator logika.', href:'pemrograman-dasar/operatorBoolean.html' },
+  { cat:'cpp', title:'Struktur Kontrol Percabangan', desc:'Pengambilan keputusan dengan if, else if, else, dan switch.', href:'pemrograman-dasar/percabangan.html' },
+  { cat:'py', title:'Computational Thinking', desc:'Dekomposisi, pengenalan pola, abstraksi, dan perancangan algoritma.', href:'koding-dan-kecerdasan-artifisial/computational-thinking.html' },
+  { cat:'py', title:'Pengenalan Bahasa Python', desc:'Keunggulan Python, sintaks yang bersih, dan cara menjalankan script.', href:'koding-dan-kecerdasan-artifisial/pengenalan-python.html' },
+  { cat:'py', title:'Variables & Tipe Data Python', desc:'Tipe data dinamis, pemformatan string, dan komentar di Python.', href:'koding-dan-kecerdasan-artifisial/variabel_tipeDataPy.html' },
+  { cat:'py', title:'Operator di Python', desc:'Operator aritmatika, penugasan, perbandingan, dan logika.', href:'koding-dan-kecerdasan-artifisial/operator.html' },
+];
+const CATS = { cpp:'Pemrograman Dasar', py:'Koding & AI' };
+const $ = (s, r=document) => r.querySelector(s);
+let filter = 'all';
+
+/* Filter + kartu */
+const filtersEl = $('#filters');
+[['all','Semua'],['cpp','Pemrograman Dasar'],['py','Koding & AI']].forEach(([k,l]) => {
+  const b = document.createElement('button');
+  b.dataset.k = k; b.textContent = l;
+  b.className = 'shrink-0 rounded-lg px-3.5 py-2 text-sm font-semibold transition';
+  b.onclick = () => { filter = k; render(); };
+  filtersEl.appendChild(b);
+});
+function render() {
+  const q = $('#search').value.trim().toLowerCase();
+  filtersEl.querySelectorAll('button').forEach(b => {
+    const on = b.dataset.k === filter;
+    b.className = 'shrink-0 rounded-lg px-3.5 py-2 text-sm font-semibold transition ' + (on ? 'bg-slate-900 text-white' : 'text-slate-500 hover:bg-white hover:text-slate-900');
+  });
+  const list = MATERI.filter(m => (filter==='all' || m.cat===filter) && (m.title+' '+m.desc).toLowerCase().includes(q));
+  $('#grid').innerHTML = list.map(m => `
+    <a href="${m.href}" class="group flex flex-col justify-between rounded-2xl border border-slate-100 bg-white p-7 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-slate-100/50">
+      <div>
+        <span class="inline-flex rounded-full ${m.cat==='cpp' ? 'bg-blue-50 text-blue-700' : 'bg-indigo-50 text-indigo-700'} px-3 py-1 text-xs font-semibold">${CATS[m.cat]}</span>
+        <h2 class="mt-5 text-lg font-bold tracking-tight text-slate-900">${m.title}</h2>
+        <p class="mt-2 text-sm leading-relaxed text-slate-500">${m.desc}</p>
+      </div>
+      <span class="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600">Buka Materi <span class="transition-transform duration-300 group-hover:translate-x-1">→</span></span>
+    </a>`).join('');
+  $('#empty').hidden = list.length > 0;
+}
+$('#search').addEventListener('input', render);
+
+/* Sidebar materi */
+$('#sideNav').innerHTML = MATERI.map(m => `
+  <a href="${m.href}" data-active="${!!m.view}" class="nav-link flex items-center gap-3 rounded-lg px-3 py-2 text-sm text-slate-500 transition hover:text-slate-900">
+    <span class="dot h-1.5 w-1.5 shrink-0 rounded-full bg-slate-200"></span><span>${m.title}</span>
+  </a>`).join('');
+
+/* TOC + scrollspy (tanpa mengubah hash, agar routing tetap aman) */
+const secs = [...document.querySelectorAll('article section')];
+$('#toc').innerHTML = secs.map(s => `<a href="#" data-id="${s.id}" data-active="false" class="toc-link -ml-px block border-l border-transparent py-1.5 pl-4 text-sm text-slate-500 transition hover:text-slate-900">${s.querySelector('h2').textContent}</a>`).join('');
+document.querySelectorAll('.toc-link').forEach(a => a.addEventListener('click', e => {
+  e.preventDefault(); document.getElementById(a.dataset.id).scrollIntoView();
+}));
+const spy = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) document.querySelectorAll('.toc-link').forEach(a => a.dataset.active = String(a.dataset.id === e.target.id));
+}), { rootMargin: '-20% 0px -70% 0px' });
+secs.forEach(s => spy.observe(s));
+
+/* Copy */
+document.querySelectorAll('.copy').forEach(btn => btn.addEventListener('click', async () => {
+  const code = btn.closest('.code').querySelector('code').innerText;
+  try { await navigator.clipboard.writeText(code); btn.textContent = 'Copied ✓'; } catch (e) { btn.textContent = 'Gagal'; }
+  setTimeout(() => btn.textContent = 'Copy', 1600);
+}));
+
+/* Routing sederhana berbasis hash */
+function route() {
+  const doc = location.hash === '#variabel-tipe-data';
+  $('#view-home').hidden = doc; $('#view-doc').hidden = !doc;
+  if (doc) { const d = $('#navDetails'); if (d && innerWidth >= 1024) d.open = true; }
+  scrollTo(0, 0);
+}
+addEventListener('hashchange', route);
+render(); route();
+</script>
 </body>
 </html>
