@@ -248,7 +248,7 @@ Positif? 1
 | Operator | Nama | Contoh |
 |---|---|---|
 | `&&` | AND (DAN) | `a && b` |
-| `\|\|` | OR (ATAU) | `a \|\| b` |
+| `&#124;&#124;` | OR (ATAU) | `a &#124;&#124; b` |
 | `!` | NOT (BUKAN) | `!a` |
 
 <div style="background:#dafbe1; border-left:4px solid #1a7f37; padding:14px 18px; border-radius:6px; margin:16px 0;">
