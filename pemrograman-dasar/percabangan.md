@@ -82,7 +82,7 @@ if (kondisi) {
 
 **Diagram alur:**
 
-![Diagram alur pernyataan if](images/flowchart-if.png)
+<img src="images/flowchart-if.png" alt="Diagram alur pernyataan if" style="width:100%; max-width:350px; height:auto;">
 
 ### Contoh Program
 
@@ -120,7 +120,7 @@ Masukkan Total Belanjaan = Rp 50000
 
 **Diagram alur program:**
 
-![Diagram alur contoh program if (diskon belanja)](images/flowchart-contoh-if-diskon.png)
+<img src="images/flowchart-contoh-if-diskon.png" alt="Diagram alur contoh program if (diskon belanja)" style="width:100%; max-width:350px; height:auto;">
 
 <div style="background:#ddf4ff; border-left:4px solid #218bff; padding:14px 18px; border-radius:6px; margin:16px 0;">
 Untuk mencetak tanda persen (<code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">%</code>) di dalam <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">printf()</code>, tulis dua kali: <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">%%</code>. Jika hanya satu, C akan menganggapnya sebagai awal dari format specifier (seperti <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">%d</code>).
@@ -144,7 +144,7 @@ if (kondisi) {
 
 **Diagram alur:**
 
-![Diagram alur pernyataan if...else](images/flowchart-if-else.png)
+<img src="images/flowchart-if-else.png" alt="Diagram alur pernyataan if...else" style="width:100%; max-width:350px; height:auto;">
 
 ### Contoh Program 1 — Menggunakan Tipe `bool`
 
@@ -175,7 +175,7 @@ True
 
 **Diagram alur program:**
 
-![Diagram alur contoh program if...else dengan tipe bool](images/flowchart-contoh-ifelse-bool.png)
+<img src="images/flowchart-contoh-ifelse-bool.png" alt="Diagram alur contoh program if...else dengan tipe bool" style="width:100%; max-width:350px; height:auto;">
 
 ### Contoh Program 2 — Pengecekan Nilai KKM
 
@@ -214,7 +214,7 @@ Maaf, kamu harus remedial.
 
 **Diagram alur program:**
 
-![Diagram alur contoh program if...else (pengecekan KKM)](images/flowchart-contoh-ifelse-kkm.png)
+<img src="images/flowchart-contoh-ifelse-kkm.png" alt="Diagram alur contoh program if...else (pengecekan KKM)" style="width:100%; max-width:350px; height:auto;">
 
 ---
 
@@ -236,7 +236,7 @@ if (kondisi1) {
 
 **Diagram alur:**
 
-![Diagram alur pernyataan else if](images/flowchart-else-if.png)
+<img src="images/flowchart-else-if.png" alt="Diagram alur pernyataan else if" style="width:100%; max-width:350px; height:auto;">
 
 ### Contoh Program — Konversi Nilai ke Predikat
 
@@ -272,7 +272,7 @@ Predikat B
 
 **Diagram alur program:**
 
-![Diagram alur contoh program else if (predikat nilai)](images/flowchart-contoh-elseif-predikat.png)
+<img src="images/flowchart-contoh-elseif-predikat.png" alt="Diagram alur contoh program else if (predikat nilai)" style="width:100%; max-width:350px; height:auto;">
 
 <div style="background:#ddf4ff; border-left:4px solid #218bff; padding:14px 18px; border-radius:6px; margin:16px 0;">
 Nilai <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">85</code> tidak memenuhi <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">nilai &gt;= 90</code>, sehingga lanjut dicek ke <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">nilai &gt;= 80</code> yang bernilai benar. Setelah itu program langsung keluar dari rangkaian <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">if...else if</code>, tanpa mengecek <code style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:4px;">nilai &gt;= 70</code> lagi. Karena itu, <strong>urutan kondisi sangat penting</strong>.
@@ -300,7 +300,7 @@ if (kondisi_luar) {
 
 **Diagram alur:**
 
-![Diagram alur nested if](images/flowchart-nested-if.png)
+<img src="images/flowchart-nested-if.png" alt="Diagram alur nested if" style="width:100%; max-width:350px; height:auto;">
 
 ### Contoh Program — Penguji Bilangan
 
@@ -359,7 +359,7 @@ Hasil Pengecekan:
 
 **Diagram alur program:**
 
-![Diagram alur contoh program nested if (penguji bilangan)](images/flowchart-contoh-nested-if-bilangan.png)
+<img src="images/flowchart-contoh-nested-if-bilangan.png" alt="Diagram alur contoh program nested if (penguji bilangan)" style="width:100%; max-width:350px; height:auto;">
 
 *Pada diagram, pengecekan genap/ganjil digambar satu kali karena prosesnya sama untuk bilangan positif dan negatif. Di kode, pengecekan tersebut ditulis di dalam masing-masing blok.*
 
@@ -421,7 +421,7 @@ switch (ekspresi) {
 
 **Diagram alur:**
 
-![Diagram alur pernyataan switch](images/flowchart-switch.png)
+<img src="images/flowchart-switch.png" alt="Diagram alur pernyataan switch" style="width:100%; max-width:350px; height:auto;">
 
 ### Aturan Penting `switch`
 
@@ -511,7 +511,7 @@ Tidak ada pilihan yang tepat
 
 **Diagram alur program:**
 
-![Diagram alur contoh program switch (menu makanan)](images/flowchart-contoh-switch-menu.png)
+<img src="images/flowchart-contoh-switch-menu.png" alt="Diagram alur contoh program switch (menu makanan)" style="width:100%; max-width:350px; height:auto;">
 
 ### `switch` atau `else if`?
 
