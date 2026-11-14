@@ -1,3 +1,19 @@
-# theme: jekyll-theme-cayman
-title: Materi Pembelajaran
-description: Kumpulan catatan dan rangkuman materi per pertemuan
+title: Catatan Materi PPLG
+description: Catatan materi kejuruan PPLG SMKN 21. Pemrograman Dasar (bahasa C) dan Koding & Kecerdasan Artifisial (Python), lengkap dengan contoh kode dan output.
+
+# Alamat situs (GitHub Pages project site). Ubah jika memakai domain sendiri.
+url: "https://faridd35.github.io"
+baseurl: "/bahan-ajar-PKM"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Tampilan memakai _layouts/default.html milik repo ini (tanpa tema bawaan).
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

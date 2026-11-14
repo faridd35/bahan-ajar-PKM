@@ -1,56 +1,43 @@
-# Bahan Ajar PKM
+# Catatan Materi PPLG
 
-Kumpulan catatan dan rangkuman materi pembelajaran, disusun per pertemuan.
+Catatan materi kejuruan PPLG SMKN 21: Pemrograman Dasar (bahasa C) dan Koding & Kecerdasan Artifisial (Python).
 
-<div style="display:flex; flex-wrap:wrap; gap:16px; margin:28px 0;">
+Situs: https://faridd35.github.io/bahan-ajar-PKM/
 
-<a href="pemrograman-dasar/bahasa-pemrograman.html" style="flex:1 1 260px; text-decoration:none; display:block; padding:22px; border-radius:10px; border:1px solid #d8dee4; background:#f6f8fa;">
-<div style="font-size:1.15em; font-weight:700; color:#1f2328;">Pemrograman Dasar (C/C++)</div>
-<div style="margin-top:6px; color:#57606a; font-size:0.95em;">Bahasa Pemrograman</div>
-</a>
+## Struktur
 
-<a href="pemrograman-dasar/pengenalan-c.html" style="flex:1 1 260px; text-decoration:none; display:block; padding:22px; border-radius:10px; border:1px solid #d8dee4; background:#f6f8fa;">
-<div style="font-size:1.15em; font-weight:700; color:#1f2328;">Pemrograman Dasar (C/C++)</div>
-<div style="margin-top:6px; color:#57606a; font-size:0.95em;">Pengenalan Bahasa C</div>
-</a>
+| Lokasi | Fungsi |
+|---|---|
+| `pemrograman-dasar/`, `koding-dan-kecerdasan-artifisial/` | Isi materi dalam format Markdown (`.md`). Ini satu-satunya tempat menulis materi. |
+| `_data/materi.yml` | Daftar materi untuk beranda dan sidebar. Urutan di file ini adalah urutan tampil. |
+| `_layouts/default.html` | Tata letak halaman materi (sidebar, isi, dan panel "Di halaman ini"). |
+| `index.html` | Beranda. |
+| `assets/css/site.css`, `assets/js/` | Gaya tampilan, pewarnaan kode, tombol salin, dan pencarian. |
 
-<a href="pemrograman-dasar/variabel_tipeData.html" style="flex:1 1 260px; text-decoration:none; display:block; padding:22px; border-radius:10px; border:1px solid #d8dee4; background:#f6f8fa;">
-<div style="font-size:1.15em; font-weight:700; color:#1f2328;">Pemrograman Dasar (C/C++)</div>
-<div style="margin-top:6px; color:#57606a; font-size:0.95em;">Bahasa C &middot; Komentar, Variabel, dan Tipe Data</div>
-</a>
+## Menambah materi baru
 
-<a href="pemrograman-dasar/operatorBoolean.html" style="flex:1 1 260px; text-decoration:none; display:block; padding:22px; border-radius:10px; border:1px solid #d8dee4; background:#f6f8fa;">
-<div style="font-size:1.15em; font-weight:700; color:#1f2328;">Pemrograman Dasar (C/C++)</div>
-<div style="margin-top:6px; color:#57606a; font-size:0.95em;">Bahasa C &middot; Boolean, Operator Perbandingan, dan Logika</div>
-</a>
+1. Buat file `.md` di folder mata pelajaran. Baris paling atas wajib:
 
-<a href="pemrograman-dasar/percabangan.html" style="flex:1 1 260px; text-decoration:none; display:block; padding:22px; border-radius:10px; border:1px solid #d8dee4; background:#f6f8fa;">
-<div style="font-size:1.15em; font-weight:700; color:#1f2328;">Pemrograman Dasar (C/C++)</div>
-<div style="margin-top:6px; color:#57606a; font-size:0.95em;">Bahasa C &middot; Struktur Kontrol Percabangan</div>
-</a>
+   ```
+   ---
+   layout: default
+   ---
+   ```
 
-<a href="koding-dan-kecerdasan-artifisial/computational-thinking.html" style="flex:1 1 260px; text-decoration:none; display:block; padding:22px; border-radius:10px; border:1px solid #d8dee4; background:#f6f8fa;">
-<div style="font-size:1.15em; font-weight:700; color:#1f2328;">Koding dan Kecerdasan Artifisial (Python)</div>
-<div style="margin-top:6px; color:#57606a; font-size:0.95em;">Computational Thinking</div>
-</a>
+2. Tambahkan satu blok di `_data/materi.yml`, di bawah mata pelajaran yang sesuai:
 
-<a href="koding-dan-kecerdasan-artifisial/pengenalan-python.html" style="flex:1 1 260px; text-decoration:none; display:block; padding:22px; border-radius:10px; border:1px solid #d8dee4; background:#f6f8fa;">
-<div style="font-size:1.15em; font-weight:700; color:#1f2328;">Koding dan Kecerdasan Artifisial (Python)</div>
-<div style="margin-top:6px; color:#57606a; font-size:0.95em;">Pengenalan Bahasa Python</div>
-</a>
+   ```yaml
+   - judul: Perulangan
+     url: /pemrograman-dasar/perulangan.html
+     ringkas: Satu atau dua kalimat tentang isi materi.
+     siap: true
+   ```
 
-<a href="koding-dan-kecerdasan-artifisial/variabel_tipeDataPy.html" style="flex:1 1 260px; text-decoration:none; display:block; padding:22px; border-radius:10px; border:1px solid #d8dee4; background:#f6f8fa;">
-<div style="font-size:1.15em; font-weight:700; color:#1f2328;">Koding dan Kecerdasan Artifisial (Python)</div>
-<div style="margin-top:6px; color:#57606a; font-size:0.95em;">Bahasa Python &middot; Komentar, Variabel, dan Tipe Data</div>
-</a>
+   Nama pada `url` sama dengan nama file `.md`, dengan ekstensi `.html`. Gunakan `siap: false` untuk materi yang masih kosong; materi tersebut tampil sebagai "Segera hadir" dan tidak bisa dibuka.
 
-<a href="koding-dan-kecerdasan-artifisial/operator.html" style="flex:1 1 260px; text-decoration:none; display:block; padding:22px; border-radius:10px; border:1px solid #d8dee4; background:#f6f8fa;">
-<div style="font-size:1.15em; font-weight:700; color:#1f2328;">Koding dan Kecerdasan Artifisial (Python)</div>
-<div style="margin-top:6px; color:#57606a; font-size:0.95em;">Bahasa Python &middot; Operator</div>
-</a>
+3. Commit. Situs ter-update dalam 1 sampai 3 menit.
 
-</div>
+## Catatan
 
----
-
-Klik salah satu kotak di atas untuk membuka catatan materi. Daftar ini akan terus bertambah setiap ada pertemuan baru.
+- File `.md` tanpa baris `layout: default` di atasnya tidak diproses GitHub Pages, sehingga halamannya tidak akan muncul.
+- Gambar diletakkan di `pemrograman-dasar/images/` dan dipanggil dengan `images/nama-file.png`.

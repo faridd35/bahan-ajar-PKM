@@ -1,0 +1,52 @@
+# Satu-satunya daftar materi. Dipakai oleh beranda (index.html) dan sidebar halaman materi.
+# Urutan di sini = urutan tampil. Untuk materi baru: tambahkan satu blok "- judul: ..." di mapel yang sesuai.
+#   url   : alamat halaman (.md diganti .html), diawali garis miring
+#   siap  : true jika isi materi sudah ada; false akan tampil "Segera hadir" dan tidak bisa dibuka
+
+- slug: pemrograman-dasar
+  nama: Pemrograman Dasar
+  bahasa: Bahasa C
+  kode: c
+  items:
+    - judul: Bahasa Pemrograman
+      url: /pemrograman-dasar/bahasa-pemrograman.html
+      ringkas: Pengenalan konsep dasar instruksi komputer dan kompilasi program.
+      siap: false
+    - judul: Pengenalan Bahasa C
+      url: /pemrograman-dasar/pengenalan-c.html
+      ringkas: Struktur dasar kode program C, fungsi main(), dan sintaks dasar.
+      siap: false
+    - judul: Komentar, Variabel, dan Tipe Data
+      url: /pemrograman-dasar/variabel_tipeData.html
+      ringkas: Cara menulis komentar, mendeklarasikan variabel beserta aturan penamaannya, tipe data int, float, double, char, string, format specifier, dan escape sequence.
+      siap: true
+    - judul: Boolean, Perbandingan, dan Logika
+      url: /pemrograman-dasar/operatorBoolean.html
+      ringkas: Tipe data boolean di C, operator perbandingan, dan operator logika (AND, OR, NOT) lengkap dengan tabel kebenarannya.
+      siap: true
+    - judul: Percabangan
+      url: /pemrograman-dasar/percabangan.html
+      ringkas: Pengambilan keputusan dengan if, if...else, else if, nested if, dan switch, dilengkapi diagram alur setiap struktur.
+      siap: true
+
+- slug: koding-dan-kecerdasan-artifisial
+  nama: Koding & Kecerdasan Artifisial
+  bahasa: Python
+  kode: python
+  items:
+    - judul: Computational Thinking
+      url: /koding-dan-kecerdasan-artifisial/computational-thinking.html
+      ringkas: Dekomposisi, pengenalan pola, abstraksi, dan perancangan algoritma.
+      siap: false
+    - judul: Pengenalan Python
+      url: /koding-dan-kecerdasan-artifisial/pengenalan-python.html
+      ringkas: Keunggulan Python, sintaks yang bersih, dan cara menjalankan script.
+      siap: false
+    - judul: Variabel, Tipe Data, Komentar, dan Input
+      url: /koding-dan-kecerdasan-artifisial/variabel_tipeDataPy.html
+      ringkas: Tipe data dinamis, casting, input(), f-string, serta perbedaannya dengan bahasa C.
+      siap: true
+    - judul: Operator
+      url: /koding-dan-kecerdasan-artifisial/operator.html
+      ringkas: Operator aritmatika, penugasan, dan perbandingan di Python, dengan contoh kode dan output.
+      siap: true
