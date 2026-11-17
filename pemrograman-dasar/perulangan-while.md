@@ -71,6 +71,10 @@ while (kondisi) {
 }
 ```
 
+**Diagram alur:**
+
+<img src="images/flowchart-while.png" alt="Diagram alur perulangan while" style="width:100%; max-width:400px; height:auto;">
+
 ### Contoh Program 1 — Mencetak Angka 1 sampai 5
 
 ```c
@@ -97,6 +101,10 @@ Sekarang angka ke: 3
 Sekarang angka ke: 4
 Sekarang angka ke: 5
 ```
+
+**Diagram alur program:**
+
+<img src="images/flowchart-contoh-while-angka.png" alt="Diagram alur contoh program while (mencetak angka 1 sampai 5)" style="width:100%; max-width:400px; height:auto;">
 
 Cara kerja program, langkah demi langkah:
 
@@ -206,6 +214,10 @@ do {
     // kode yang diulang
 } while (kondisi);
 ```
+
+**Diagram alur:**
+
+<img src="images/flowchart-do-while.png" alt="Diagram alur perulangan do...while" style="width:100%; max-width:400px; height:auto;">
 
 <div markdown="1" style="background:#fff8c5; border-left:4px solid #9a6700; padding:14px 18px; border-radius:6px; margin:16px 0;">
 
@@ -324,6 +336,10 @@ Masukkan nilai (0-100): 85
 Nilai yang kamu masukkan: 85
 ```
 
+**Diagram alur program:**
+
+<img src="images/flowchart-contoh-dowhile-validasi.png" alt="Diagram alur contoh program do...while (validasi input)" style="width:100%; max-width:400px; height:auto;">
+
 ---
 
 ## 4. Pernyataan `break`
@@ -343,6 +359,10 @@ while (kondisi) {
     // ...
 }
 ```
+
+**Diagram alur:**
+
+<img src="images/flowchart-break.png" alt="Diagram alur pernyataan break di dalam perulangan" style="width:100%; max-width:400px; height:auto;">
 
 ### Contoh Program
 
@@ -414,6 +434,10 @@ while (kondisi) {
     // kode ini dilewati jika continue dijalankan
 }
 ```
+
+**Diagram alur:**
+
+<img src="images/flowchart-continue.png" alt="Diagram alur pernyataan continue di dalam perulangan" style="width:100%; max-width:400px; height:auto;">
 
 ### Contoh Program
 
@@ -547,6 +571,10 @@ Hasilnya adalah: 42
 Pilih Opsi (0-3): 0
 Terima kasih, program selesai.
 ```
+
+**Diagram alur program:**
+
+<img src="images/flowchart-contoh-menu-kalkulator.png" alt="Diagram alur contoh program menu kalkulator dengan break dan continue" style="width:100%; max-width:400px; height:auto;">
 
 Alur program:
 

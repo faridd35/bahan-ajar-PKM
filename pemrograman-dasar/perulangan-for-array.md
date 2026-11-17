@@ -34,6 +34,10 @@ for (inisialisasi; kondisi; perubahan) {
 }
 ```
 
+**Diagram alur:**
+
+<img src="images/flowchart-for.png" alt="Diagram alur perulangan for" style="width:100%; max-width:400px; height:auto;">
+
 <div markdown="1" style="background:#f2ebff; border-left:4px solid #8250df; padding:14px 18px; border-radius:6px; margin:16px 0;">
 
 | Bagian | Fungsi | Dijalankan |
@@ -69,6 +73,10 @@ Angka ke 2
 Angka ke 3
 Angka ke 4
 ```
+
+**Diagram alur program:**
+
+<img src="images/flowchart-contoh-for-angka.png" alt="Diagram alur contoh program for (mencetak angka 0 sampai 4)" style="width:100%; max-width:400px; height:auto;">
 
 Program ini sama dengan perulangan `while` pada materi sebelumnya, hanya ditulis lebih ringkas:
 
@@ -421,6 +429,10 @@ Elemen ke-2 nilainya: 30
 Elemen ke-3 nilainya: 40
 Elemen ke-4 nilainya: 50
 ```
+
+**Diagram alur program:**
+
+<img src="images/flowchart-contoh-array-for.png" alt="Diagram alur contoh program menelusuri array dengan for" style="width:100%; max-width:400px; height:auto;">
 
 <div markdown="1" style="background:#fff8c5; border-left:4px solid #9a6700; padding:14px 18px; border-radius:6px; margin:16px 0;">
 
