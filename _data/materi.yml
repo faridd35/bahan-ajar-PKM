@@ -28,6 +28,14 @@
       url: /pemrograman-dasar/percabangan.html
       ringkas: Pengambilan keputusan dengan if, if...else, else if, nested if, dan switch, dilengkapi diagram alur setiap struktur.
       siap: true
+    - judul: Perulangan while, do-while, break, dan continue
+      url: /pemrograman-dasar/perulangan-while.html
+      ringkas: Mengulang kode selama kondisi benar dengan while dan do...while, serta mengendalikan perulangan dengan break dan continue, lengkap dengan contoh program menu.
+      siap: true
+    - judul: Perulangan for dan Array
+      url: /pemrograman-dasar/perulangan-for-array.html
+      ringkas: Perulangan for dan nested loop, serta array (indeks, mengakses dan mengubah elemen, sizeof) beserta penelusurannya dengan for.
+      siap: true
 
 - slug: koding-dan-kecerdasan-artifisial
   nama: Koding & Kecerdasan Artifisial
