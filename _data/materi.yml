@@ -36,6 +36,10 @@
       url: /pemrograman-dasar/perulangan-for-array.html
       ringkas: Perulangan for dan nested loop, serta array (indeks, mengakses dan mengubah elemen, sizeof) beserta penelusurannya dengan for.
       siap: true
+    - judul: fungsi
+      url: /pemrograman-dasar/fungsi.html
+      ringkas: Membuat dan memanggil Fungsi, parameter dan argumen, nilai kembalian (return), prototype, variabel lokal, serta array sebagai parameter, dengan contoh kalkulator menu.
+      siap: true
 
 - slug: koding-dan-kecerdasan-artifisial
   nama: Koding & Kecerdasan Artifisial

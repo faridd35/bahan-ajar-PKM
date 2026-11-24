@@ -438,4 +438,4 @@ Pada contoh di atas, `tinggi >= 100` dan `umur >= 5` masing-masing adalah operat
 
 ---
 
-*Materi ini disusun untuk kebutuhan pembelajaran Pemrograman Dasar Kelas X RPL.*
+*Materi ini disusun untuk kebutuhan pembelajaran Pemrograman Dasar Kelas X PPLG.*
